@@ -1,3 +1,0 @@
-new feature
-here we are talking about diff concept
-but we have to add the file to the staging area first
