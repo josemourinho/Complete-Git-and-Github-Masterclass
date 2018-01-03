@@ -1,0 +1,22 @@
+Hello! You are in:git-fast:
+$git config --global diff.tool p4merge
+Hello! You are in:git-fast:
+$git config --global difftool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"  Hello! You are in:git-fast:
+$git config --global difftool.prompt false
+Hello! You are in:git-fast:
+$git config --global merge.tool p4merge
+Hello! You are in:git-fast:
+$git config --global mergetool.p4merge.p                                                        ath "C:/Program Files/Perfor                                                        ce/p4merge.exe"
+Hello! You are in:git-fast:
+$git config --global mergetool.prompt fa                                                        lse
+Hello! You are in:git-fast:
+$git config --global --list
+user.name=Conor
+user.email=conor.nugent9@gmail.com
+core.editor='c:/program files/sublime te                                                        xt 3/subl.exe' -w
+diff.tool=p4merge
+difftool.p4merge.path=C:/Pro                                                        gram Files/Perforce/p4merge.exe
+difftool.prompt=false
+merge.tool=p4merge
+mergetool.p4merge.path=C:/Pr                                                        ogram Files/Perforce/p4merge.exe
+mergetool.prompt=false

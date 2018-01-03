@@ -1,0 +1,119 @@
+Hello! You are in:demo-tag (master):
+$git log --oneline --decorate --graph --all
+* 46e3f9f (HEAD -> master, origin/master) committed humans.txt
+* e52f2ea (tag: v-3.1.0-beta) master: modified title - index.html
+* 7bb81ef master: modified title - 404.html
+* 2eb6d5f master: modified js file version - index.html
+* 98add86 (tag: v-3.1.0-alpha) master: modified title - index.html
+| * 4062de2 (branch-v-1.8) master: modified css - index.html
+| * 6ce6c2f (tag: v-1.9-rc2) master: modified title - index.html
+|/
+* 8cac70d master: modified css -index.html
+* 0712f99 master: modified title -index.html
+* 5639dc8 master: edited height - 404.html
+* 775084e master: edited text align- 404.html
+* ba1156f master: edited width - 404.html
+* 2c08c31 master: edited font-family - 404.html
+* f0f7a35 master: edited line-height - 404.html
+* a5b6244 master: changed title - index.html
+* a350f87 setup repo
+Hello! You are in:demo-tag (master):
+$git checkout v-1.9-rc2
+Note: checking out 'v-1.9-rc2'.
+
+You are in 'detached HEAD' state. You can l                                                            ook around, make experimental
+changes and commit them, and you can discar                                                            d any commits you make in this
+state without impacting any branches by per                                                            forming another checkout.
+
+If you want to create a new branch to retai                                                            n commits you create, you may
+do so (now or later) by using -b with the c                                                            heckout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 6ce6c2f... master: modified                                                             title - index.html
+Hello! You are in:demo-tag ((v-1.9-rc2)):
+$git checkout master
+Previous HEAD position was 6ce6c2f... maste                                                            r: modified title - index.html
+Switched to branch 'master'
+Your branch is up to date with 'origin/mast                                                            er'.
+Hello! You are in:demo-tag (master):
+$git checkout -b branch-v-1.9 v-1.9-rc2
+Switched to a new branch 'branch-v-1.9'
+Hello! You are in:demo-tag (branch-v-1.9):
+$subl index.html
+Hello! You are in:demo-tag (branch-v-1.9):
+$git add index.html
+Hello! You are in:demo-tag (branch-v-1.9 +)                                                            :
+$^C
+Hello! You are in:demo-tag (branch-v-1.9 +)                                                            :
+$git status
+On branch branch-v-1.9
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstag                                                            e)
+
+        modified:   index.html
+
+Hello! You are in:demo-tag (branch-v-1.9 +)                                                            :
+$git commit -m "branch-v-1.9: modified titl                                                            e - index.html"
+[branch-v-1.9 177e76a] branch-v-1.9: modifi                                                            ed title - index.html
+ 1 file changed, 1 insertion(+), 1 deletion                                                            (-)
+Hello! You are in:demo-tag (branch-v-1.9):
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/mast                                                            er'.
+Hello! You are in:demo-tag (master):
+$git log --oneline --decorate --graph --all                                                            * 177e76a (branch-v-1.9) branch-v-1.9: modified title - index.html
+| * 46e3f9f (HEAD -> master, origin/master) committed humans.txt
+| * e52f2ea (tag: v-3.1.0-beta) master: modified title - index.html
+| * 7bb81ef master: modified title - 404.html
+| * 2eb6d5f master: modified js file version - index.html
+| * 98add86 (tag: v-3.1.0-alpha) master: modified title - index.html
+| | * 4062de2 (branch-v-1.8) master: modified css - index.html
+| |/
+|/|
+* | 6ce6c2f (tag: v-1.9-rc2) master: modified title - index.html
+|/
+* 8cac70d master: modified css -index.html
+* 0712f99 master: modified title -index.html
+* 5639dc8 master: edited height - 404.html
+* 775084e master: edited text align- 404.html
+* ba1156f master: edited width - 404.html
+* 2c08c31 master: edited font-family - 404.html
+* f0f7a35 master: edited line-height - 404.html
+* a5b6244 master: changed title - index.html
+* a350f87 setup repo
+Hello! You are in:demo-tag (master):
+$git merge branch-v-1.9
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index                                                            .html
+Automatic merge failed; fix conflicts and t                                                            hen commit the result.
+Hello! You are in:demo-tag (master *+|MERGI                                                            NG):
+$git mergetool
+Merging:
+index.html
+
+Normal merge conflict for 'index.html':
+  {local}: modified file
+  {remote}: modified file
+        Hello! You are in:demo-tag (master                                                             +|MERGING):
+$
+Hello! You are in:demo-tag (master +|MERGIN                                                            G):
+$git status
+On branch master
+Your branch is up to date with 'origin/mast                                                            er'.
+
+All conflicts fixed but you are still mergi                                                            ng.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+        modified:   index.html
+
+Hello! You are in:demo-tag (master +|MERGIN                                                            G):
+$git commit -am "committed index.html after                                                             conflict resolution"
+[master b9f2c0d] committed index.html after                                                             conflict resolution
+Hello! You are in:demo-tag (master):
+$git branch -d branch-v-1.9
+Deleted branch branch-v-1.9 (was 177e76a).
+Hello! You are in:demo-tag (master):
+$

@@ -1,0 +1,152 @@
+Hello! You are in:git-fast:
+$git clone https://github.com/josemourinho/Learn-Python-The-Hard-Way.git
+Cloning into 'Learn-Python-The-Hard-Way'...
+remote: Counting objects: 90, done.
+remote: Total 90 (delta 0), reused 0 (delta 0), pack-reused 90
+Unpacking objects: 100% (90/90), done.
+Hello! You are in:git-fast:
+$ls -l
+total 132
+drwxr-xr-x 1 conor 197121     0 Dec  7 11:50 demo-checkout-commit/
+drwxr-xr-x 1 conor 197121     0 Dec  7 17:12 git-clean-demo/
+drwxr-xr-x 1 conor 197121     0 Dec  7 16:02 git-reset-demo-1/
+drwxr-xr-x 1 conor 197121     0 Dec  7 16:11 git-reset-demo-2/
+drwxr-xr-x 1 conor 197121     0 Dec  7 16:07 git-reset-demo-3/
+drwxr-xr-x 1 conor 197121     0 Dec  7 16:08 git-reset-demo-4/
+drwxr-xr-x 1 conor 197121     0 Dec  7 16:21 git-reset-demo-5/
+drwxr-xr-x 1 conor 197121     0 Dec  6 17:13 git-with-github-demo/
+-rw-r--r-- 1 conor 197121 61126 Dec  7 10:57 initializr-verekia-4.0.zip
+drwxr-xr-x 1 conor 197121     0 Dec  8 09:58 Learn-Python-The-Hard-Way/
+drwxr-xr-x 1 conor 197121     0 Dec  6 11:48 myRepoFromExisitingSource/
+drwxr-xr-x 1 conor 197121     0 Dec  6 16:38 MyRepoFromScratch/
+drwxr-xr-x 1 conor 197121     0 Dec  6 15:16 sample-java-project/
+drwxr-xr-x 1 conor 197121     0 Dec  7 12:57 undo-demo-git-repo/
+Hello! You are in:git-fast:
+$cd Learn-Python-The-Hard-Way/
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$ls -l
+total 241
+-rw-r--r-- 1 conor 197121  318 Dec  8 09:58 ex1.py
+-rw-r--r-- 1 conor 197121 2420 Dec  8 09:58 ex10.py
+-rw-r--r-- 1 conor 197121 1421 Dec  8 09:58 ex11.py
+-rw-r--r-- 1 conor 197121  574 Dec  8 09:58 ex12.py
+-rw-r--r-- 1 conor 197121 1437 Dec  8 09:58 ex13.py
+-rw-r--r-- 1 conor 197121 1914 Dec  8 09:58 ex14.py
+-rw-r--r-- 1 conor 197121 2147 Dec  8 09:58 ex15.py
+-rw-r--r-- 1 conor 197121   19 Dec  8 09:58 ex15_sample.txt
+-rw-r--r-- 1 conor 197121 4458 Dec  8 09:58 ex16.py
+-rw-r--r-- 1 conor 197121  207 Dec  8 09:58 ex16drill.py
+-rw-r--r-- 1 conor 197121 2331 Dec  8 09:58 ex17.py
+-rw-r--r-- 1 conor 197121  537 Dec  8 09:58 ex18.py
+-rw-r--r-- 1 conor 197121  714 Dec  8 09:58 ex19.py
+-rw-r--r-- 1 conor 197121  493 Dec  8 09:58 ex19SD.py
+-rw-r--r-- 1 conor 197121 1783 Dec  8 09:58 ex1Notes.py
+-rw-r--r-- 1 conor 197121  365 Dec  8 09:58 ex2.py
+-rw-r--r-- 1 conor 197121 2744 Dec  8 09:58 ex20.py
+-rw-r--r-- 1 conor 197121  723 Dec  8 09:58 ex21.py
+-rw-r--r-- 1 conor 197121  186 Dec  8 09:58 ex21drill.py
+-rw-r--r-- 1 conor 197121  597 Dec  8 09:58 ex23.py
+-rw-r--r-- 1 conor 197121 1241 Dec  8 09:58 ex24.py
+-rw-r--r-- 1 conor 197121 1020 Dec  8 09:58 ex25.py
+-rw-r--r-- 1 conor 197121 1020 Dec  8 09:58 ex251.py
+-rw-r--r-- 1 conor 197121 2197 Dec  8 09:58 ex26.py
+-rw-r--r-- 1 conor 197121  512 Dec  8 09:58 ex29.py
+-rw-r--r-- 1 conor 197121 1233 Dec  8 09:58 ex3.py
+-rw-r--r-- 1 conor 197121 1421 Dec  8 09:58 ex30.py
+-rw-r--r-- 1 conor 197121 2497 Dec  8 09:58 ex31.py
+-rw-r--r-- 1 conor 197121 1409 Dec  8 09:58 ex31test.py
+-rw-r--r-- 1 conor 197121 4458 Dec  8 09:58 ex32.py
+-rw-r--r-- 1 conor 197121  193 Dec  8 09:58 ex32test.py
+-rw-r--r-- 1 conor 197121 1154 Dec  8 09:58 ex33.py
+-rw-r--r-- 1 conor 197121  147 Dec  8 09:58 ex34.py
+-rw-r--r-- 1 conor 197121 5872 Dec  8 09:58 ex35.py
+-rw-r--r-- 1 conor 197121 3685 Dec  8 09:58 ex35P.py
+-rw-r--r-- 1 conor 197121 5637 Dec  8 09:58 ex36.py
+-rw-r--r-- 1 conor 197121  136 Dec  8 09:58 ex37and.py
+-rw-r--r-- 1 conor 197121  935 Dec  8 09:58 ex37assert.py
+-rw-r--r-- 1 conor 197121  740 Dec  8 09:58 ex37break.py
+-rw-r--r-- 1 conor 197121  803 Dec  8 09:58 ex37class.py
+-rw-r--r-- 1 conor 197121  463 Dec  8 09:58 ex37continue.py
+-rw-r--r-- 1 conor 197121  147 Dec  8 09:58 ex37del.py
+-rw-r--r-- 1 conor 197121 2138 Dec  8 09:58 ex37elif.py
+-rw-r--r-- 1 conor 197121  914 Dec  8 09:58 ex37else.py
+-rw-r--r-- 1 conor 197121 3488 Dec  8 09:58 ex37except.py
+-rw-r--r-- 1 conor 197121  491 Dec  8 09:58 ex37exec.py
+-rw-r--r-- 1 conor 197121  985 Dec  8 09:58 ex37finally.py
+-rw-r--r-- 1 conor 197121  332 Dec  8 09:58 ex37for.py
+-rw-r--r-- 1 conor 197121   38 Dec  8 09:58 ex37from.py
+-rw-r--r-- 1 conor 197121  426 Dec  8 09:58 ex37global.py
+-rw-r--r-- 1 conor 197121  500 Dec  8 09:58 ex37if.py
+-rw-r--r-- 1 conor 197121  158 Dec  8 09:58 ex37import.py
+-rw-r--r-- 1 conor 197121  217 Dec  8 09:58 ex37in.py
+-rw-r--r-- 1 conor 197121  766 Dec  8 09:58 ex37is.py
+-rw-r--r-- 1 conor 197121  796 Dec  8 09:58 ex37lambda.py
+-rw-r--r-- 1 conor 197121  722 Dec  8 09:58 ex37not.py
+-rw-r--r-- 1 conor 197121  593 Dec  8 09:58 ex37or.py
+-rw-r--r-- 1 conor 197121  382 Dec  8 09:58 ex37pass.py
+-rw-r--r-- 1 conor 197121  103 Dec  8 09:58 ex37raise.py
+-rw-r--r-- 1 conor 197121  200 Dec  8 09:58 ex37return.py
+-rw-r--r-- 1 conor 197121  455 Dec  8 09:58 ex37try.py
+-rw-r--r-- 1 conor 197121  457 Dec  8 09:58 ex37while.py
+-rw-r--r-- 1 conor 197121  562 Dec  8 09:58 ex37withas.py
+-rw-r--r-- 1 conor 197121  785 Dec  8 09:58 ex37yield.py
+-rw-r--r-- 1 conor 197121 1019 Dec  8 09:58 ex38.py
+-rw-r--r-- 1 conor 197121 2018 Dec  8 09:58 ex39.py
+-rw-r--r-- 1 conor 197121  558 Dec  8 09:58 ex3test.py
+-rw-r--r-- 1 conor 197121 1834 Dec  8 09:58 ex4.py
+-rw-r--r-- 1 conor 197121 2307 Dec  8 09:58 ex40.py
+-rw-r--r-- 1 conor 197121  508 Dec  8 09:58 ex402.py
+-rw-r--r-- 1 conor 197121 2400 Dec  8 09:58 ex41.py
+-rw-r--r-- 1 conor 197121 1096 Dec  8 09:58 ex42.py
+-rw-r--r-- 1 conor 197121  766 Dec  8 09:58 ex43.py
+-rw-r--r-- 1 conor 197121 2594 Dec  8 09:58 ex5.py
+-rw-r--r-- 1 conor 197121 2526 Dec  8 09:58 ex6.py
+-rw-r--r-- 1 conor 197121 2205 Dec  8 09:58 ex7.py
+-rw-r--r-- 1 conor 197121 1508 Dec  8 09:58 ex8.py
+-rw-r--r-- 1 conor 197121 1233 Dec  8 09:58 ex9.py
+-rw-r--r-- 1 conor 197121  530 Dec  8 09:58 exfunction.py
+-rw-r--r-- 1 conor 197121  315 Dec  8 09:58 Fizzbuzz.py
+-rw-r--r-- 1 conor 197121   21 Dec  8 09:58 lab.py
+-rw-r--r-- 1 conor 197121 1309 Dec  8 09:58 languages.txt
+-rw-r--r-- 1 conor 197121   48 Dec  8 09:58 new_file.txt
+-rw-r--r-- 1 conor 197121   27 Dec  8 09:58 README.md
+-rw-r--r-- 1 conor 197121   20 Dec  8 09:58 ted.txt
+-rw-r--r-- 1 conor 197121 2202 Dec  8 09:58 test.py
+-rw-r--r-- 1 conor 197121   46 Dec  8 09:58 test.txt
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$cat ex1.py
+print("Hello World!")
+print("Hello Again")
+print("I like typing this.")
+print("This is fun.")
+print('Yay! Printng.')
+print("I'd much rather you 'not'.")
+print('I "said" do not touch this.')
+#print ("I have just completed the first lesson, well nearly completed")
+#print ("I hope I get this finished in time")
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git pull origin master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/josemourinho/Learn-Python-The-Hard-Way
+ * branch            master     -> FETCH_HEAD
+   7fac7a6..fa3e119  master     -> origin/master
+Updating 7fac7a6..fa3e119
+Fast-forward
+ ex1.py | 1 +
+ 1 file changed, 1 insertion(+)
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$cat ex1.py
+print("Hello World!")
+print("Hello Again")
+print("I like typing this.")
+print("This is fun.")
+print('Yay! Printng.')
+print("I'd much rather you 'not'.")
+print('I "said" do not touch this.')
+#print ("I have just completed the first lesson, well nearly completed")
+#print ("I hope I get this finished in time")
+#This line has been added to demonstrate the git "pull" command
+Hello! You are in:Learn-Python-The-Hard-Way (master):

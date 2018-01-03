@@ -1,0 +1,118 @@
+Hello! You are in:demo-branching (master):
+$git branch -d small-feature
+error: The branch 'small-feature' is not fully                                                                   merged.
+If you are sure you want to delete it, run 'gi                                                                  t branch -D small-feature'.
+Hello! You are in:demo-branching (master):
+$git branch -D small-feature
+Deleted branch small-feature (was 905db24).
+Hello! You are in:demo-branching (master):
+$clear
+Hello! You are in:demo-branching (master):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+fat                   tile.png
+favicon.ico           tile-wide.png
+Hello! You are in:demo-branching (master):
+$subl humans.txt
+Hello! You are in:demo-branching (master):
+$subl humans.txt
+Hello! You are in:demo-branching (master):
+$git add humans.txt
+Hello! You are in:demo-branching (master +):
+$git commit -am "good humans"
+[master 48e27a4] good humans
+ 1 file changed, 8 insertions(+)
+ create mode 100644 humans.txt
+Hello! You are in:demo-branching (master):
+$subl robots.txt
+Hello! You are in:demo-branching (master):
+$git add robots.txt
+Hello! You are in:demo-branching (master +):
+$git commit -am "robots changing life"
+[master 5d358e2] robots changing life
+ 1 file changed, 10 insertions(+)
+ create mode 100644 robots.txt
+Hello! You are in:demo-branching (master):
+$git log --oneline
+5d358e2 (HEAD -> master) robots changing life
+48e27a4 good humans
+0b68354 fat
+Hello! You are in:demo-branching (master):
+$git checkout -b new-branch-1 master
+Switched to a new branch 'new-branch-1'
+Hello! You are in:demo-branching (new-branch-1                                                                  ):
+$git log --oneline
+5d358e2 (HEAD -> new-branch-1, master) robots                                                                   changing life
+48e27a4 good humans
+0b68354 fat
+Hello! You are in:demo-branching (new-branch-1                                                                  ):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-branching (master):
+$git log --oneline
+5d358e2 (HEAD -> master, new-branch-1) robots                                                                   changing life
+48e27a4 good humans
+0b68354 fat
+Hello! You are in:demo-branching (master):
+$git checkout new--1
+error: pathspec 'new--1' did not match any fil                                                                  e(s) known to git.
+Hello! You are in:demo-branching (master):
+$git checkout new-1
+error: pathspec 'new-1' did not match any file                                                                  (s) known to git.
+Hello! You are in:demo-branching (master):
+$git checkout new-branch-1
+Switched to branch 'new-branch-1'
+Hello! You are in:demo-branching (new-branch-1                                                                  ):
+$subl humans.txt
+Hello! You are in:demo-branching (new-branch-1                                                                  ):
+$git add humans.txt
+Hello! You are in:demo-branching (new-branch-1                                                                   +):
+$git commit -am "humans for good society"
+[new-branch-1 ea20dc6] humans for good society
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hello! You are in:demo-branching (new-branch-1                                                                  ):
+$git log --oneline
+ea20dc6 (HEAD -> new-branch-1) humans for good                                                                   society
+5d358e2 (master) robots changing life
+48e27a4 good humans
+0b68354 fat
+Hello! You are in:demo-branching (new-branch-1                                                                  ):
+$^C
+Hello! You are in:demo-branching (new-branch-1                                                                  ):
+$it checgit
+bash: it: command not found
+Hello! You are in:demo-branching (new-branch-1                                                                  ):
+$
+Hello! You are in:demo-branching (new-branch-1                                                                  ):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-branching (master):
+$git checkout -b new-branch-2 new-branch-1
+Switched to a new branch 'new-branch-2'
+Hello! You are in:demo-branching (new-branch-2                                                                  ):
+$git log --oneline
+ea20dc6 (HEAD -> new-branch-2, new-branch-1) h                                                                  umans for good society
+5d358e2 (master) robots changing life
+48e27a4 good humans
+0b68354 fat
+Hello! You are in:demo-branching (new-branch-2                                                                  ):
+$git log --oneline
+ea20dc6 (HEAD -> new-branch-2, new-branch-1) h                                                                  umans for good society
+5d358e2 (master) robots changing life
+48e27a4 good humans
+0b68354 fat
+Hello! You are in:demo-branching (new-branch-2                                                                  ):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-branching (master):
+$git log --oneline --decorate --graph --all
+* ea20dc6 (new-branch-2, new-branch-1) humans for good society
+* 5d358e2 (HEAD -> master) robots changing life
+* 48e27a4 good humans
+* 0b68354 fat
+Hello! You are in:demo-branching (master):
+$git checkout new-branch-1
+Switched to branch 'new-branch-1'

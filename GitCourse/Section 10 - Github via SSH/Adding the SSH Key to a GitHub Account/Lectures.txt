@@ -1,0 +1,2 @@
+Hello! You are in:git-fast:
+$clip < ~/.ssh/id_rsa.pub

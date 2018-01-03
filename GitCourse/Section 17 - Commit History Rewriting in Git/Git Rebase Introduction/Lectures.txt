@@ -1,0 +1,6 @@
+Hello! You are in:demo-merge (master):
+$git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+Hello! You are in:demo-merge (feature-branch):
+$git rebase master
+Current branch feature-branch is up to date.

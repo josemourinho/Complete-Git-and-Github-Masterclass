@@ -1,0 +1,137 @@
+Hello! You are in:demo-checkout-commit ((a39afe0...)):
+$git checkout master
+Previous HEAD position was a39afe0... 2nd commit - robot.txt
+Switched to branch 'master'
+Hello! You are in:demo-checkout-commit (master):
+$git checkout ^C
+Hello! You are in:demo-checkout-commit (master):
+$git checkout a39afe0
+Note: checking out 'a39afe0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at a39afe0... 2nd commit - robot.txt
+Hello! You are in:demo-checkout-commit ((a39afe0...)):
+$git log --oneline
+a39afe0 (HEAD) 2nd commit - robot.txt
+6c69070 1st commit - robot.txt
+fe2c3d2 all files committed
+Hello! You are in:demo-checkout-commit ((a39afe0...)):
+$vi robots.txt
+Hello! You are in:demo-checkout-commit ((a39afe0...) *):
+$git commit -am "6th commit - robot.txt"
+[detached HEAD 7f40667] 6th commit - robot.txt
+ 1 file changed, 1 insertion(+)
+Hello! You are in:demo-checkout-commit ((7f40667...)):
+$git log --oneline
+7f40667 (HEAD) 6th commit - robot.txt
+a39afe0 2nd commit - robot.txt
+6c69070 1st commit - robot.txt
+fe2c3d2 all files committed
+Hello! You are in:demo-checkout-commit ((7f40667...)):
+$git checkout master
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  7f40667 6th commit - robot.txt
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 7f40667
+
+Switched to branch 'master'
+Hello! You are in:demo-checkout-commit (master):
+$git log --oneline
+8c9eb47 (HEAD -> master) 5th commit - robot.txt
+24ccff2 4th commit - robot.txt
+79d8470 3rd commit - robot.txt
+a39afe0 2nd commit - robot.txt
+6c69070 1st commit - robot.txt
+fe2c3d2 all files committed
+Hello! You are in:demo-checkout-commit (master):
+$git checkout a39afe0
+Note: checking out 'a39afe0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at a39afe0... 2nd commit - robot.txt
+Hello! You are in:demo-checkout-commit ((a39afe0...)):
+$cat robots.txt
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow:
+
+line1.....
+line2.....
+Hello! You are in:demo-checkout-commit ((a39afe0...)):
+$vi robots.txt
+Hello! You are in:demo-checkout-commit ((a39afe0...) *):
+$git commit -am "6th commit - robot.txt"
+[detached HEAD 2f7cedb] 6th commit - robot.txt
+ 1 file changed, 1 insertion(+)
+Hello! You are in:demo-checkout-commit ((2f7cedb...)):
+$git checkout -b newbranch
+Switched to a new branch 'newbranch'
+Hello! You are in:demo-checkout-commit (newbranch):
+$git log --oneline
+2f7cedb (HEAD -> newbranch) 6th commit - robot.txt
+a39afe0 2nd commit - robot.txt
+6c69070 1st commit - robot.txt
+fe2c3d2 all files committed
+Hello! You are in:demo-checkout-commit (newbranch):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-checkout-commit (master):
+$git log --oneline
+8c9eb47 (HEAD -> master) 5th commit - robot.txt
+24ccff2 4th commit - robot.txt
+79d8470 3rd commit - robot.txt
+a39afe0 2nd commit - robot.txt
+6c69070 1st commit - robot.txt
+fe2c3d2 all files committed
+Hello! You are in:demo-checkout-commit (master):
+$cat robots.txt
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow:
+
+line1.....
+line2.....
+weird-experimentation
+line4.....
+line5.....
+Hello! You are in:demo-checkout-commit (master):
+$git checkout newbranch
+Switched to branch 'newbranch'
+Hello! You are in:demo-checkout-commit (newbranch):
+$cat robots.txt
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow:
+
+line1.....
+line2.....
+line6.....
+Hello! You are in:demo-checkout-commit (newbranch):
+$

@@ -1,0 +1,69 @@
+Hello! You are in:demo-amend-commit (master):
+$git status
+On branch master
+nothing to commit, working tree clean
+Hello! You are in:demo-amend-commit (master):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-amend-commit (master):
+$clear
+Hello! You are in:demo-amend-commit (master):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-amend-commit (master):
+$git log --oneline
+ab473ae (HEAD -> master) setup repository
+Hello! You are in:demo-amend-commit (master):
+$subl index.html
+Hello! You are in:demo-amend-commit (master):
+$git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-amend-commit (master +):
+$git commit -m "master:modified"
+[master 1726edb] master:modified
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hello! You are in:demo-amend-commit (master):
+$git log --oneline
+1726edb (HEAD -> master) master:modified
+ab473ae setup repository
+Hello! You are in:demo-amend-commit (master):
+$subl 404.html
+Hello! You are in:demo-amend-commit (master):
+$git add 404.html
+warning: LF will be replaced by CRLF in 404.html.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-amend-commit (master +):
+$git commit --amend --no-edit
+[master d0fe8ce] master:modified
+ Date: Thu Dec 14 14:16:35 2017 +0000
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+Hello! You are in:demo-amend-commit (master):
+$git log --oneline
+d0fe8ce (HEAD -> master) master:modified
+ab473ae setup repository
+Hello! You are in:demo-amend-commit (master):
+$subl browserconfig.xml
+Hello! You are in:demo-amend-commit (master):
+$git add browserconfig.xml
+warning: LF will be replaced by CRLF in browserconfig.xml.
+The file will have its original line endings in your working directory.
+giHello! You are in:demo-amend-commit (master +):
+$git commit --amend
+[master be609f6] master:modified the title in index.html and 404.html; modified browserconfig.xml
+ Date: Thu Dec 14 14:16:35 2017 +0000
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+Hello! You are in:demo-amend-commit (master):
+$git log --oneline
+be609f6 (HEAD -> master) master:modified the title in index.html and 404.html; modified browserconfig.xml
+ab473ae setup repository

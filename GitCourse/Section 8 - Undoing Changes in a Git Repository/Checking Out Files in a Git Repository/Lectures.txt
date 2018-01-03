@@ -1,0 +1,69 @@
+[master f7fb23c] 4th commit - checkoutfile
+ 1 file changed, 1 insertion(+)
+Hello! You are in:undo-demo-git-repo (master):
+$git log --oneline
+f7fb23c (HEAD -> master) 4th commit - checkoutfile
+04acee3 3rd commit - checkoutfile
+87d65b8 2nd commit - checkoutfile
+1b26c09 1st commit - checkoutfile
+Hello! You are in:undo-demo-git-repo (master):
+$clear
+Hello! You are in:undo-demo-git-repo (master):
+$git log --oneline
+f7fb23c (HEAD -> master) 4th commit - checkoutfile
+04acee3 3rd commit - checkoutfile
+87d65b8 2nd commit - checkoutfile
+1b26c09 1st commit - checkoutfile
+Hello! You are in:undo-demo-git-repo (master):
+$cat checkoutfile.txt
+line1...
+line2...
+line3...
+line4...
+Hello! You are in:undo-demo-git-repo (master):
+$ git checkout 87d65b8 checkoutfile.txt
+Hello! You are in:undo-demo-git-repo (master +):
+$git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   checkoutfile.txt
+
+Hello! You are in:undo-demo-git-repo (master +):
+$git checkout HEAD checkoutfile.txt
+Hello! You are in:undo-demo-git-repo (master):
+$git status
+On branch master
+nothing to commit, working tree clean
+Hello! You are in:undo-demo-git-repo (master):
+$git log --oneline
+f7fb23c (HEAD -> master) 4th commit - checkoutfile
+04acee3 3rd commit - checkoutfile
+87d65b8 2nd commit - checkoutfile
+1b26c09 1st commit - checkoutfile
+Hello! You are in:undo-demo-git-repo (master):
+$ git checkout 87d65b8 checkoutfile.txt
+Hello! You are in:undo-demo-git-repo (master +):
+$git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   checkoutfile.txt
+
+Hello! You are in:undo-demo-git-repo (master +):
+$git commit -m "5th commit - checkoutfile"
+[master 682e4a5] 5th commit - checkoutfile
+ 1 file changed, 2 deletions(-)
+Hello! You are in:undo-demo-git-repo (master):
+$git log --oneline
+682e4a5 (HEAD -> master) 5th commit - checkoutfile
+f7fb23c 4th commit - checkoutfile
+04acee3 3rd commit - checkoutfile
+87d65b8 2nd commit - checkoutfile
+1b26c09 1st commit - checkoutfile
+Hello! You are in:undo-demo-git-repo (master):
+$cat checkoutfile.txt
+line1...
+line2...

@@ -1,0 +1,42 @@
+Hello! You are in:demo-tag (master):
+$git add humans.txt
+warning: LF will be replaced by CRLF in                                                         humans.txt.
+The file will have its original line end                                                        ings in your working directory.
+Hello! You are in:demo-tag (master +):
+$git commit -m "committed humans.txt"
+[master 46e3f9f] committed humans.txt
+ 1 file changed, 1 insertion(+), 1 delet                                                        ion(-)
+Hello! You are in:demo-tag (master):
+$git log --oneline --decorate --graph --all                                                     * 46e3f9f (HEAD -> master) committed humans.txt
+* e52f2ea (tag: v-3.1.0-beta, origin/master) master: modified title - index.html
+* 7bb81ef master: modified title - 404.html
+* 2eb6d5f master: modified js file version - index.html
+* 98add86 (tag: v-3.1.0-alpha) master: modified title - index.html
+| * 4062de2 (branch-v-1.8) master: modified css - index.html
+| * 6ce6c2f (tag: v-1.9-rc2) master: modified title - index.html
+|/
+* 8cac70d master: modified css -index.html
+* 0712f99 master: modified title -index.html
+* 5639dc8 master: edited height - 404.html
+* 775084e master: edited text align- 404.html
+* ba1156f master: edited width - 404.html
+* 2c08c31 master: edited font-family - 404.html
+* f0f7a35 master: edited line-height - 404.html
+* a5b6244 master: changed title - index.html
+* a350f87 setup repo
+Hello! You are in:demo-tag (master):
+$git push origin --follow-tags
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 304 bytes | 76.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/josemourinho/demo-tag.git
+   e52f2ea..46e3f9f  master -> master
+Hello! You are in:demo-tag (master):
+$git cat-file -t v-3.1.0-alpha
+tag
+Hello! You are in:demo-tag (master):
+$git cat-file -t v-1.9-rc2
+commit

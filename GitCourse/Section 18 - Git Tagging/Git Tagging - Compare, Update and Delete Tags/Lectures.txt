@@ -1,0 +1,180 @@
+Hello! You are in:demo-tag (master *):
+$git tag
+v-1.8-rc1
+v-1.9-rc2
+v-1.9.1
+Hello! You are in:demo-tag (master *):
+$git log --oneline --decorate --graph --all                                                            * 4062de2 (branch-v-1.8) master: modified c                                                            ss - index.html
+* 6ce6c2f (tag: v-1.9-rc2) master: modified                                                             title - index.html
+* 8cac70d (HEAD -> master, tag: v-1.9.1) ma                                                            ster: modified css -index.html
+* 0712f99 master: modified title -index.htm                                                            l
+* 5639dc8 (tag: v-1.8-rc1) master: edited h                                                            eight - 404.html
+* 775084e master: edited text align- 404.ht                                                            ml
+* ba1156f master: edited width - 404.html
+* 2c08c31 master: edited font-family - 404.                                                            html
+* f0f7a35 master: edited line-height - 404.                                                            html
+* a5b6244 master: changed title - index.htm                                                            l
+* a350f87 setup repo
+
+Hello! You are in:demo-tag (master *):
+$
+aHello! You are in:demo-tag (master *):
+$subl index.html
+Hello! You are in:demo-tag (master *):
+$git add index.html
+Hello! You are in:demo-tag (master +):
+$git commit -m "master: modified title - in                                                            dex.html"
+[master 98add86] master: modified title - i                                                            ndex.html
+ 1 file changed, 1 insertion(+), 1 deletion                                                            (-)
+Hello! You are in:demo-tag (master):
+$git tag -a v-3.1.0-alpha -m "Release 3.1"
+Hello! You are in:demo-tag (master):
+$subl index.html                                                                                       Hello! You are in:demo-tag (master):
+$git add index.html                                                                                    Hello! You are in:demo-tag (master +):
+$git commit -m "master: modified js file ve                                                            rsion - index.html"
+[master 2eb6d5f] master: modified js file v                                                            ersion - index.html
+ 1 file changed, 1 insertion(+), 1 deletion                                                            (-)
+Hello! You are in:demo-tag (master):
+$git tag -a v-3.1.0-beta -m "Release 3.1"                                                              Hello! You are in:demo-tag (master):
+$git log --oneline --decorate --graph --all                                                            * 2eb6d5f (HEAD -> master, tag: v-3.1.0-beta) master: modified js file version - index.html
+* 98add86 (tag: v-3.1.0-alpha) master: modified title - index.html
+| * 4062de2 (branch-v-1.8) master: modified css - index.html
+| * 6ce6c2f (tag: v-1.9-rc2) master: modified title - index.html
+|/
+* 8cac70d (tag: v-1.9.1) master: modified css -index.html
+* 0712f99 master: modified title -index.html
+* 5639dc8 (tag: v-1.8-rc1) master: edited height - 404.html
+* 775084e master: edited text align- 404.html
+* ba1156f master: edited width - 404.html
+* 2c08c31 master: edited font-family - 404.html
+* f0f7a35 master: edited line-height - 404.html
+* a5b6244 master: changed title - index.html
+* a350f87 setup repo
+Hello! You are in:demo-tag (master):
+$git diff v-3.1.0-alpha v-3.1.0-beta
+diff --git a/index.html b/index.html
+index 5640716..a0887b2 100644
+--- a/index.html
++++ b/index.html
+@@ -74,7 +74,7 @@
+         <script>window.jQuery || document.                                                            write('<script src="js/vendor/jquery-1.11.2                                                            .min.js"><\/script>')</script>
+
+         <script src="js/plugins.js"></scri                                                            pt>
+-        <script src="js/main.js"></script>
++        <script src="js/main2.js"></script                                                            :...skipping...
+diff --git a/index.html b/index.html
+index 5640716..a0887b2 100644
+--- a/index.html
++++ b/index.html
+@@ -74,7 +74,7 @@
+         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+         <script src="js/plugins.js"></script>
+-        <script src="js/main.js"></script>
++        <script src="js/main2.js"></script>
+
+         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+         <script>
+Hello! You are in:demo-tag (master):
+$git difftool v-3.1.0-alpha v-3.1.0-beta                                                               Hello! You are in:demo-tag (master):
+$git log --oneline --decorate --graph --all
+* 2eb6d5f (HEAD -> master, tag: v-3.1.0-beta) master: modified js file version - index.html
+* 98add86 (tag: v-3.1.0-alpha) master: modified title - index.html
+| * 4062de2 (branch-v-1.8) master: modified css - index.html
+| * 6ce6c2f (tag: v-1.9-rc2) master: modified title - index.html
+|/
+* 8cac70d (tag: v-1.9.1) master: modified css -index.html
+* 0712f99 master: modified title -index.html
+* 5639dc8 (tag: v-1.8-rc1) master: edited height - 404.html
+* 775084e master: edited text align- 404.html
+* ba1156f master: edited width - 404.html
+* 2c08c31 master: edited font-family - 404.html
+* f0f7a35 master: edited line-height - 404.html
+* a5b6244 master: changed title - index.html
+* a350f87 setup repo
+Hello! You are in:demo-tag (master):
+$subl 404.html
+Hello! You are in:demo-tag (master):
+$git add 404.html
+warning: LF will be replaced by CRLF in 404                                                            .html.
+The file will have its original line ending                                                            s in your working directory.
+Hello! You are in:demo-tag (master +):
+$git commit -m "master: modified title - 40                                                            4.html"
+[master 7bb81ef] master: modified title - 4                                                            04.html
+ 1 file changed, 1 insertion(+), 1 deletion                                                            (-)
+Hello! You are in:demo-tag (master):
+$subl index.html
+Hello! You are in:demo-tag (master):
+$git add index.html                                                                                    Hello! You are in:demo-tag (master +):
+$git commit -m "master: modified title - in                                                            dex.html"
+[master e52f2ea] master: modified title - i                                                            ndex.html
+ 1 file changed, 1 insertion(+), 1 deletion                                                            (-)
+Hello! You are in:demo-tag (master):
+$git log --oneline --decorate --graph --all                                                            * e52f2ea (HEAD -> master) master: modified                                                             title - index.html
+* e52f2ea (HEAD -> master) master: modified title - index.html
+* 7bb81ef master: modified title - 404.html
+* 2eb6d5f (tag: v-3.1.0-beta) master: modified js file version - index.html
+* 98add86 (tag: v-3.1.0-alpha) master: modified title - index.html
+| * 4062de2 (branch-v-1.8) master: modified css - index.html
+| * 6ce6c2f (tag: v-1.9-rc2) master: modified title - index.html
+|/
+* 8cac70d (tag: v-1.9.1) master: modified css -index.html
+* 0712f99 master: modified title -index.html
+* 5639dc8 (tag: v-1.8-rc1) master: edited height - 404.html
+* 775084e master: edited text align- 404.html
+* ba1156f master: edited width - 404.html
+* 2c08c31 master: edited font-family - 404.html
+* f0f7a35 master: edited line-height - 404.html
+* a5b6244 master: changed title - index.html
+* a350f87 setup repo
+Hello! You are in:demo-tag (master):
+$git tag -a v-3.1.0-beta --force
+Updated tag 'v-3.1.0-beta' (was c7b06a3)
+Hello! You are in:demo-tag (master):
+$git tag -a v-3.1.0-beta --force e52f2ea
+pdated tag 'v-3.1.0-beta' (was 1e5bde1)
+Hello! You are in:demo-tag (master):
+$git log --oneline --decorate --graph --all
+* e52f2ea (HEAD -> master, tag: v-3.1.0-beta) master: modified title - index.html
+* 7bb81ef master: modified title - 404.html
+* 2eb6d5f master: modified js file version - index.html
+* 98add86 (tag: v-3.1.0-alpha) master: modified title - index.html
+| * 4062de2 (branch-v-1.8) master: modified css - index.html
+| * 6ce6c2f (tag: v-1.9-rc2) master: modified title - index.html
+|/
+* 8cac70d (tag: v-1.9.1) master: modified css -index.html
+* 0712f99 master: modified title -index.html
+* 5639dc8 (tag: v-1.8-rc1) master: edited height - 404.html
+* 775084e master: edited text align- 404.html
+* ba1156f master: edited width - 404.html
+* 2c08c31 master: edited font-family - 404.html
+* f0f7a35 master: edited line-height - 404.html
+* a5b6244 master: changed title - index.html
+* a350f87 setup repo
+Hello! You are in:demo-tag (master):
+$git tag v-1.8-rc1 --delete
+Deleted tag 'v-1.8-rc1' (was 5639dc8)
+Hello! You are in:demo-tag (master):
+$git log --oneline --decorate --graph --all
+* e52f2ea (HEAD -> master, tag: v-3.1.0-beta) master: modified title - index.html
+* 7bb81ef master: modified title - 404.html
+* 2eb6d5f master: modified js file version - index.html
+* 98add86 (tag: v-3.1.0-alpha) master: modified title - index.html
+| * 4062de2 (branch-v-1.8) master: modified css - index.html
+| * 6ce6c2f (tag: v-1.9-rc2) master: modified title - index.html
+|/
+* 8cac70d master: modified css -index.html
+* 0712f99 master: modified title -index.html
+* 5639dc8 master: edited height - 404.html
+* 775084e master: edited text align- 404.html
+* ba1156f master: edited width - 404.html
+* 2c08c31 master: edited font-family - 404.html
+* f0f7a35 master: edited line-height - 404.html
+* a5b6244 master: changed title - index.html
+* a350f87 setup repo
+Hello! You are in:demo-tag (master):
+$git tag
+v-1.9-rc2
+v-3.1.0-alpha
+v-3.1.0-beta
+

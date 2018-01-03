@@ -1,0 +1,89 @@
+Hello! You are in:demo-branching (master *):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-branching (master *):
+$git branch -a
+* master
+Hello! You are in:demo-branching (master *):
+$git branch small-feature
+Hello! You are in:demo-branching (master *):
+$git branch -a
+* master
+  small-feature
+Hello! You are in:demo-branching (master *):
+$git branch -m small-feature quick-feature
+Hello! You are in:demo-branching (master *):
+$git branch -a
+* master
+  quick-feature
+Hello! You are in:demo-branching (master *):
+$git branch -d quick-feature
+Deleted branch quick-feature (was 0b68354).
+Hello! You are in:demo-branching (master *):
+$git branch -a
+* master
+Hello! You are in:demo-branching (master *):
+$git branch small-feature
+Hello! You are in:demo-branching (master *):
+$git branch -a
+* master
+  small-feature
+Hello! You are in:demo-branching (master *):
+$git checkout small-feature
+Switched to branch 'small-feature'
+D       fat
+Hello! You are in:demo-branching (small-feature *):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-branching (small-feature *):
+$subl humans.txt
+$git add humans.txt
+Hello! You are in:demo-branching (small-feature +):
+$git status
+On branch small-feature
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    fat
+        new file:   humans.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        404.html
+        apple-touch-icon.png
+        browserconfig.xml
+        css/
+        favicon.ico
+        index.html
+        js/
+        robots.txt
+        tile-wide.png
+        tile.png
+
+Hello! You are in:demo-branching (small-feature +):
+$git commit -m "modified humans.txt"
+[small-feature 905db24] modified humans.txt
+ 2 files changed, 16 insertions(+), 1 deletion(-)
+ delete mode 100644 fat
+ create mode 100644 humans.txt
+Hello! You are in:demo-branching (small-feature):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-branching (master):
+$git branch -d small-feature
+error: The branch 'small-feature' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D small-feature'.
+Hello! You are in:demo-branching (master):
+$git branch -D small-feature
+Deleted branch small-feature (was 905db24).

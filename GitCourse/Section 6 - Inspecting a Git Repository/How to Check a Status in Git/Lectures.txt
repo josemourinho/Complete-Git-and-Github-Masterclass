@@ -1,0 +1,132 @@
+Hello! You are in:MyRepoFromScratch (master):
+$ls -l
+total 3
+-rw-r--r-- 1 conor 197121 60 Dec  6 15:22 demoF     ile1
+-rw-r--r-- 1 conor 197121 41 Dec  6 11:25 First     FileUsingEcho.txt
+-rw-r--r-- 1 conor 197121 40 Dec  6 11:27 Secon     dFileUsingVI.txt
+Hello! You are in:MyRepoFromScratch (master):
+$clear
+Hello! You are in:MyRepoFromScratch (master):
+$ls
+demoFile1               SecondFileUsingVI.txt
+FirstFileUsingEcho.txt
+Hello! You are in:MyRepoFromScratch (master):
+$git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        FirstFileUsingEcho.txt
+        SecondFileUsingVI.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Hello! You are in:MyRepoFromScratch (master):
+$vi weightLossChart
+Hello! You are in:MyRepoFromScratch (master):
+$vi dietChart
+Hello! You are in:MyRepoFromScratch (master):
+$git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        FirstFileUsingEcho.txt
+        SecondFileUsingVI.txt
+        dietChart
+        weightLossChart
+
+nothing added to commit but untracked files present (use "git add" to track)
+Hello! You are in:MyRepoFromScratch (master):
+$git status --long
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        FirstFileUsingEcho.txt
+        SecondFileUsingVI.txt
+        dietChart
+        weightLossChart
+
+nothing added to commit but untracked files present (use "git add" to track)
+Hello! You are in:MyRepoFromScratch (master):
+$git status -s
+?? FirstFileUsingEcho.txt
+?? SecondFileUsingVI.txt
+?? dietChart
+?? weightLossChart
+Hello! You are in:MyRepoFromScratch (master):
+$git add weightLossChart
+warning: LF will be replaced by CRLF in weightLossChart.
+The file will have its original line endings in your working directory.
+Hello! You are in:MyRepoFromScratch (master +):
+$git status -s
+A  weightLossChart
+?? FirstFileUsingEcho.txt
+?? SecondFileUsingVI.txt
+?? dietChart
+Hello! You are in:MyRepoFromScratch (master +):
+$git commit -m "First commit for weightLossChart"
+[master 5ae35a7] First commit for weightLossChart
+ 1 file changed, 1 insertion(+)
+ create mode 100644 weightLossChart
+Hello! You are in:MyRepoFromScratch (master):
+$git status -s
+?? FirstFileUsingEcho.txt
+?? SecondFileUsingVI.txt
+?? dietChart
+Hello! You are in:MyRepoFromScratch (master):
+$vi weightLossChart
+warning: LF will be replaced by CRLF in weightLossChart.
+The file will have its original line endings in your working directory.
+Hello! You are in:MyRepoFromScratch (master *):
+$git status -s
+ M weightLossChart
+?? FirstFileUsingEcho.txt
+?? SecondFileUsingVI.txt
+?? dietChart
+warning: LF will be replaced by CRLF in weightLossChart.
+The file will have its original line endings in your working directory.
+Hello! You are in:MyRepoFromScratch (master *):
+$git add weightLossChart
+warning: LF will be replaced by CRLF in weightLossChart.
+The file will have its original line endings in your working directory.
+Hello! You are in:MyRepoFromScratch (master +):
+$git status -s
+M  weightLossChart
+?? FirstFileUsingEcho.txt
+?? SecondFileUsingVI.txt
+?? dietChart
+Hello! You are in:MyRepoFromScratch (master +):
+$git commit -m "Second commit for weightLossChart"
+[master 0a23ee9] Second commit for weightLossChart
+ 1 file changed, 1 insertion(+)
+Hello! You are in:MyRepoFromScratch (master):
+$git status -s
+?? FirstFileUsingEcho.txt
+?? SecondFileUsingVI.txt
+?? dietChart
+Hello! You are in:MyRepoFromScratch (master):
+$ls -l
+total 5
+-rw-r--r-- 1 conor 197121 60 Dec  6 15:22 demoFile1
+-rw-r--r-- 1 conor 197121 48 Dec  6 15:48 dietChart
+-rw-r--r-- 1 conor 197121 41 Dec  6 11:25 FirstFileUsingEcho.txt
+-rw-r--r-- 1 conor 197121 40 Dec  6 11:27 SecondFileUsingVI.txt
+-rw-r--r-- 1 conor 197121 51 Dec  6 15:52 weightLossChart
+Hello! You are in:MyRepoFromScratch (master):
+$mv weightLossChart weightLossChart2
+Hello! You are in:MyRepoFromScratch (master *):
+$ls -l
+total 5
+-rw-r--r-- 1 conor 197121 60 Dec  6 15:22 demoFile1
+-rw-r--r-- 1 conor 197121 48 Dec  6 15:48 dietChart
+-rw-r--r-- 1 conor 197121 41 Dec  6 11:25 FirstFileUsingEcho.txt
+-rw-r--r-- 1 conor 197121 40 Dec  6 11:27 SecondFileUsingVI.txt
+-rw-r--r-- 1 conor 197121 51 Dec  6 15:52 weightLossChart2
+Hello! You are in:MyRepoFromScratch (master *):
+$git status -s
+ D weightLossChart
+?? FirstFileUsingEcho.txt
+?? SecondFileUsingVI.txt
+?? dietChart
+?? weightLossChart2

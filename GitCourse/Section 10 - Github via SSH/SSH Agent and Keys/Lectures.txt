@@ -1,0 +1,2 @@
+Hello! You are in:git-fast:
+$eval "$(ssh-agent -s)"

@@ -1,0 +1,41 @@
+Hello! You are in:git-fast:
+$vi ~/.gitconfig
+Hello! You are in:git-fast:
+$clear
+Hello! You are in:git-fast:
+$mkdir MyRepoFromScratch
+Hello! You are in:git-fast:
+$cd MyRepoFromScratch/
+Hello! You are in:MyRepoFromScratch:
+$ls -l
+total 0
+Hello! You are in:MyRepoFromScratch:
+$git init
+Initialized empty Git repository in C:/Users/c        onor/git-fast/MyRepoFromScratch/.git/
+Hello! You are in:MyRepoFromScratch (master #)        :
+$ls -al
+total 4
+drwxr-xr-x 1 conor 197121 0 Dec  6 11:22 ./
+drwxr-xr-x 1 conor 197121 0 Dec  6 11:21 ../
+drwxr-xr-x 1 conor 197121 0 Dec  6 11:22 .git/
+Hello! You are in:MyRepoFromScratch (master #)        :
+$echo "This is my first file using echo comman        d" >> FirstFileUsingEcho.txt
+Hello! You are in:MyRepoFromScratch (master #)        :
+$ls
+FirstFileUsingEcho.txt
+Hello! You are in:MyRepoFromScratch (master #):
+$cat FirstFileUsingEcho.txt
+This is my first file using echo command
+Hello! You are in:MyRepoFromScratch (master #):
+$vi SecondFileUsingVI.txt
+Hello! You are in:MyRepoFromScratch (master #):
+$cat SecondFileUsingVI.txt
+This is the second file using vi editor
+Hello! You are in:MyRepoFromScratch (master #):
+$ls -al
+total 10
+drwxr-xr-x 1 conor 197121  0 Dec  6 11:27 ./
+drwxr-xr-x 1 conor 197121  0 Dec  6 11:21 ../
+drwxr-xr-x 1 conor 197121  0 Dec  6 11:22 .git/
+-rw-r--r-- 1 conor 197121 41 Dec  6 11:25 FirstFileUsingEcho.txt
+-rw-r--r-- 1 conor 197121 40 Dec  6 11:27 SecondFileUsingVI.txt

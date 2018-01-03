@@ -1,0 +1,53 @@
+Hello! You are in:MyRepoFromScratch (mas       ter #):
+$git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in        what will be committed)
+
+        FirstFileUsingEcho.txt
+        SecondFileUsingVI.txt
+        demoFile1
+
+nothing added to commit but untracked fi       les present (use "git add" to track)
+Hello! You are in:MyRepoFromScratch (mas       ter #):
+$git add demoFile1
+warning: LF will be replaced by CRLF in        demoFile1.
+The file will have its original line end       ings in your working directory.
+Hello! You are in:MyRepoFromScratch (mas       ter +):
+$git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to un       stage)
+
+        new file:   demoFile1
+
+Untracked files:
+  (use "git add <file>..." to include in        what will be committed)
+
+        FirstFileUsingEcho.txt
+        SecondFileUsingVI.txt
+
+Hello! You are in:MyRepoFromScratch (master +):
+$git commit -m "our first commit in this course"
+
+[master (root-commit) 62f946b] our first commit in this course
+ 1 file changed, 1 insertion(+)
+ create mode 100644 demoFile1
+Hello! You are in:MyRepoFromScratch (master):
+$git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        FirstFileUsingEcho.txt
+        SecondFileUsingVI.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Hello! You are in:MyRepoFromScratch (master):
+$

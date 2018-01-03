@@ -1,0 +1,12 @@
+Hello! You are in:demo-tag (master):
+$git push origin --tags
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 601 bytes | 100.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/josemourinho/demo-tag.git
+ * [new tag]         v-1.9-rc2 -> v-1.9-rc2
+ * [new tag]         v-3.1.0-alpha -> v-3.1.0-alpha
+ * [new tag]         v-3.1.0-beta -> v-3.1.0-beta

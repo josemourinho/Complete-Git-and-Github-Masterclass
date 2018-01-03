@@ -1,0 +1,33 @@
+Hello! You are in:test (master):
+$ls
+README.md   testfile-2  testfile-4
+testfile-1  testfile-3
+gHello! You are in:test (master):
+$git diff
+Hello! You are in:test (master):
+$cd ..
+Hello! You are in:git-fast:
+$clear
+Hello! You are in:git-fast:
+$cd test1
+warning: LF will be replaced by CRLF in newfeature.txt.
+The file will have its original line endings in your working directory.
+Hello! You are in:test1 (master *+):
+$ls
+newfeature.txt  testfile  testfile.orig
+warning: LF will be replaced by CRLF in newfeature.txt.
+The file will have its original line endings in your working directory.
+Hello! You are in:test1 (master *+):
+$git diff
+warning: LF will be replaced by CRLF in newfeature.txt.
+The file will have its original line endings in your working directory.
+diff --git a/newfeature.txt b/newfeature.txt
+index d40cfe9..f4d1653 100644
+--- a/newfeature.txt
++++ b/newfeature.txt
+@@ -1,2 +1,3 @@
+ new feature
+ here we are talking about diff concept
++but we have to add the file to the staging area first
+warning: LF will be replaced by CRLF in newfeature.txt.
+The file will have its original line endings in your working directory.

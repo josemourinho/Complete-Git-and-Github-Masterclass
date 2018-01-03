@@ -1,0 +1,124 @@
+Hello! You are in:business-venture (master *):
+$git commit -am "prior to remote demo"
+[master 795f524] prior to remote demo
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+Hello! You are in:business-venture (master):
+$git remote -v
+Hello! You are in:business-venture (master):
+$git remote add origin https://github.com/josemourinho/business-venture.git
+Hello! You are in:business-venture (master):
+$git remote -v
+origin  https://github.com/josemourinho/business-venture.git (fetch)
+origin  https://github.com/josemourinho/business-venture.git (push)
+Hello! You are in:business-venture (master):
+$git push origin master
+Counting objects: 26, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (26/26), 2.43 KiB | 356.00 KiB/s, done.
+Total 26 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/josemourinho/business-venture.git
+ * [new branch]      master -> master
+Hello! You are in:business-venture (master):
+$ls
+administration-doc
+advertising-doc
+hr-doc
+major-milestones
+marketing-doc
+product-development-doc
+product-release-doc
+product-testing-doc
+purchases-doc
+sales-doc
+Hello! You are in:business-venture (master):
+$git add .
+Hello! You are in:business-venture (master +):
+$git commit -m "All Files"
+[master 9b47ad5] All Files
+ 7 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 administration-doc
+ create mode 100644 advertising-doc
+ create mode 100644 hr-doc
+ create mode 100644 product-development-doc
+ create mode 100644 product-release-doc
+ create mode 100644 product-testing-doc
+ create mode 100644 purchases-doc
+Hello! You are in:business-venture (master):
+$git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 413 bytes | 413.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/josemourinho/business-venture.git
+   795f524..9b47ad5  master -> master
+Hello! You are in:business-venture (master):
+$suble major-milestones
+bash: suble: command not found
+Hello! You are in:business-venture (master):
+$subl major-milestones
+Hello! You are in:business-venture (master):
+$git add major-milestones
+Hello! You are in:business-venture (master +):
+$git commit -m "Beta product launched"
+[master 5836edb] Beta product launched
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Hello! You are in:business-venture (master):
+$subl major-milestones
+Hello! You are in:business-venture (master):
+$git diff master origin/master
+diff --git a/major-milestones b/major-milestones
+index e87309f..5867975 100644
+--- a/major-milestones
++++ b/major-milestones
+@@ -6,5 +6,4 @@ MAJOR MILESTONES:
+ -- Hiring and forming the hr, administrative and purchasing departments
+ -- Admin dept purchases office stationary, purchasing department buys office equipment
+ -- We have developed an MVP for demo
+--- Demonstrating our MVP to major prospective clients
+--- Launching creation of Beta product
+\ No newline at end of file
++-- We need to identify the major market segments
+\ No newline at end of file
+Hello! You are in:business-venture (master *):
+$git difftool master origin/master
+Hello! You are in:business-venture (master *):
+$git add major-milestones
+Hello! You are in:business-venture (master +):
+$git commit -m "Beta product launched"
+[master 93ed921] Beta product launched
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Hello! You are in:business-venture (master):
+$git checkout -b feature_branch
+Switched to a new branch 'feature_branch'
+Hello! You are in:business-venture (feature_branch):
+$subl major-milestones
+Hello! You are in:business-venture (feature_branch):
+$git add major-milestones
+Hello! You are in:business-venture (feature_branch +):
+$git commit -m "Releasing Beta Product"
+[feature_branch dc7b0d3] Releasing Beta Product
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Hello! You are in:business-venture (feature_branch):
+$git diff feature_branch master
+diff --git a/major-milestones b/major-milestones
+index 12d591e..7257001 100644
+--- a/major-milestones
++++ b/major-milestones
+@@ -8,5 +8,4 @@ MAJOR MILESTONES:
+ -- We have developed an MVP for demo
+ -- Demonstrating our MVP to major prospective clients
+ -- Launching creation of Beta product
+--- Beta product launched
+--- Release of Beta product
+\ No newline at end of file
++-- Beta product launched
+\ No newline at end of file
+Hello! You are in:business-venture (feature_branch):
+$subl major-milestones
+Hello! You are in:business-venture (feature_branch):
+$subl major-milestones
+Hello! You are in:business-venture (feature_branch *):
+$git difftool feature_branch master

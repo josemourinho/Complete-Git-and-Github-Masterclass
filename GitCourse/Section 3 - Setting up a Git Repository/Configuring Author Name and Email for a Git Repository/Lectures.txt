@@ -1,0 +1,49 @@
+Hello! You are in:~:
+$pwd
+/c/Users/conor
+Hello! You are in:~:
+$mkdir git-fast
+Hello! You are in:~:
+$cd git-fast
+Hello! You are in:git-fast:
+$pwd
+/c/Users/conor/git-fast
+Hello! You are in:git-fast:
+$git config --global --list
+user.name=Conor
+user.email=conor.nugent9@gmail.com
+core.editor='c:/program files/sublime text 3/subl.exe' -w
+diff.tool=p4merge
+diff.tool=p4merge.path=/c/Program Files/Perforce/p4merge.exe
+difftool.prompt=false
+merge.tool=p4merge
+merge.tool=p4merge.path=C:/Program Files/Perforce/p4merge.exe
+difftool.p4merge.path=C:\Program Files\Perforce\p4merge.exe
+Hello! You are in:git-fast:
+$git config --global user.name "Conor"
+Hello! You are in:git-fast:
+$git config --global --list
+user.name=Conor
+user.email=conor.nugent9@gmail.com
+core.editor='c:/program files/sublime text 3/subl.exe' -w
+diff.tool=p4merge
+diff.tool=p4merge.path=/c/Program Files/Perforce/p4merge.exe
+difftool.prompt=false
+merge.tool=p4merge
+merge.tool=p4merge.path=C:/Program Files/Perforce/p4merge.exe
+difftool.p4merge.path=C:\Program Files\Perforce\p4merge.exe
+Hello! You are in:git-fast:
+$git config --global user.email "conor.nugent9@gmail.com"
+Hello! You are in:git-fast:
+$git config --global --list
+user.name=Conor
+user.email=conor.nugent9@gmail.com
+core.editor='c:/program files/sublime text 3/subl.exe' -w
+diff.tool=p4merge
+diff.tool=p4merge.path=/c/Program Files/Perforce/p4merge.exe
+difftool.prompt=false
+merge.tool=p4merge
+merge.tool=p4merge.path=C:/Program Files/Perforce/p4merge.exe
+difftool.p4merge.path=C:\Program Files\Perforce\p4merge.exe
+Hello! You are in:git-fast:
+$vi ~/.gitconfig

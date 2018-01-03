@@ -1,0 +1,2 @@
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$ssh-keygen -t rsa -b 2048 - C "home machine"

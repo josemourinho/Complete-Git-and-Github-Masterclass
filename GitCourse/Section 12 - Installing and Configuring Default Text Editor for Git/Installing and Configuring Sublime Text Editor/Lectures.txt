@@ -1,0 +1,32 @@
+Hello! You are in:~:
+$git config --global core.editor "'c:/program files/sublime text 3/subl.exe' -w"
+Hello! You are in:~:
+$git config --global --list
+user.name=Conor
+user.email=conor.nugent9@gmail.com
+core.editor='c:/program files/sublime text 3/subl.exe' -w
+diff.tool=p4merge
+diff.tool=p4merge.path=/c/Program Files/Perforce/p4merge.exe
+difftool.prompt=false
+merge.tool=p4merge
+merge.tool=p4merge.path=C:/Program Files/Perforce/p4merge.exe
+difftool.p4merge.path=C:\Program Files\Perforce\p4merge.exe
+Hello! You are in:~:
+$cd text
+bash: cd: text: No such file or directory
+Hello! You are in:~:
+$cd git-fast
+Hello! You are in:git-fast:
+$cd test
+Hello! You are in:test (master +):
+$git commit
+Aborting commit due to empty commit message.
+Hello! You are in:test (master +):
+$git commit
+[master (root-commit) c886040] Our first commit using sublime
+ 5 files changed, 1 insertion(+)
+ create mode 100644 README.md
+ create mode 100644 testfile-1
+ create mode 100644 testfile-2
+ create mode 100644 testfile-3
+ create mode 100644 testfile-4

@@ -1,0 +1,176 @@
+Hello! You are in:demo-tag (master):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-tag (master):
+$git log --oneline --decorate --graph --                                                        all
+* 5639dc8 (HEAD -> master) master: edite                                                        d height - 404.html
+* 775084e master: edited text align- 404                                                        .html
+* ba1156f master: edited width - 404.htm                                                        l
+* 2c08c31 master: edited font-family - 4                                                        04.html
+* f0f7a35 master: edited line-height - 4                                                        04.html
+* a5b6244 master: changed title - index.                                                        html
+* a350f87 setup repo
+Hello! You are in:demo-tag (master):
+$git tag v-1.8-rc1
+Hello! You are in:demo-tag (master):
+$git tag
+v-1.8-rc1
+Hello! You are in:demo-tag (master):
+$git tag --list
+v-1.8-rc1
+Hello! You are in:demo-tag (master):
+$git log --oneline --decorate --graph --                                                        all
+* 5639dc8 (HEAD -> master, tag: v-1.8-rc                                                        1) master: edited height - 404.html
+* 775084e master: edited text align- 404                                                        .html
+* ba1156f master: edited width - 404.htm                                                        l
+* 2c08c31 master: edited font-family - 4                                                        04.html
+* f0f7a35 master: edited line-height - 4                                                        04.html
+* a5b6244 master: changed title - index.                                                        :...skipping...
+* 5639dc8 (HEAD -> master, tag: v-1.8-rc1) master: edited height - 404.html
+* 775084e master: edited text align- 404.html
+* ba1156f master: edited width - 404.html
+* 2c08c31 master: edited font-family - 404.html
+* f0f7a35 master: edited line-height - 404.html
+* a5b6244 master: changed title - index.html
+* a350f87 setup repo
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+Hello! You are in:demo-tag (master):
+$git tag
+v-1.8-rc1
+Hello! You are in:demo-tag (master):
+$git show
+commit 5639dc83076b6980ff1062faebb6c2c95                                                        e7bb366 (HEAD -> master, tag: v-1.8-rc1)
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 20 10:03:11 2017 +0000
+
+    master: edited height - 404.html
+
+diff --git a/404.html b/404.html
+index c31e2b3..20497d4 100644
+--- a/404.html
++++ b/404.html
+@@ -15,7 +15,7 @@
+             color: #888;
+             display: table;
+             font-family: times new roma                                                        n;
+-            height: 100%;
++            height: 90%;
+             text-align: left;
+             width: 100%;
+         }
+Hello! You are in:demo-tag (master):
+$git log --oneline --decorate --graph --                                                        all
+* 5639dc8 (HEAD -> master, tag: v-1.8-rc                                                        1) master: edited height - 404.html
+* 775084e master: edited text align- 404                                                        .html
+* ba1156f master: edited width - 404.htm                                                        l
+* 2c08c31 master: edited font-family - 4                                                        04.html
+* f0f7a35 master: edited line-height - 4                                                        04.html
+* a5b6244 master: changed title - index.                                                        html
+* a350f87 setup repo
+Hello! You are in:demo-tag (master):
+$subl index.html
+Hello! You are in:demo-tag (master):
+$git add index.html
+warning: LF will be replaced by CRLF in                                                         index.html.
+The file will have its original line end                                                        ings in your working directory.
+Hello! You are in:demo-tag (master +):
+$git commit -m "master: modified title -                                                        index.html"
+[master 0712f99] master: modified title                                                         -index.html
+ 1 file changed, 1 insertion(+), 1 delet                                                        ion(-)
+Hello! You are in:demo-tag (master):
+$git tag -a v-1.9-rc2 -m "release versio                                                        n 1.9"
+Hello! You are in:demo-tag (master):
+$git log --oneline --decorate --graph --all                                                     * 0712f99 (HEAD -> master, tag: v-1.9-rc2) master: modified title -index.html
+* 5639dc8 (tag: v-1.8-rc1) master: edited height - 404.html
+* 775084e master: edited text align- 404.html
+* ba1156f master: edited width - 404.html
+* 2c08c31 master: edited font-family - 404.html
+* f0f7a35 master: edited line-height - 404.html
+* a5b6244 master: changed title - index.html
+* a350f87 setup repo
+Hello! You are in:demo-tag (master):
+$subl index.html
+Hello! You are in:demo-tag (master):
+$git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-tag (master +):
+$git commit -m "master: modified css -index.html"
+
+[master 8cac70d] master: modified css -index.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hello! You are in:demo-tag (master):
+$
+Hello! You are in:demo-tag (master):
+$git tag -a v-1.9.1
+Hello! You are in:demo-tag (master):
+$git log --oneline --decorate --graph --all
+* 8cac70d (HEAD -> master, tag: v-1.9.1) master: modified css -index.html
+* 0712f99 (tag: v-1.9-rc2) master: modified title -index.html
+* 5639dc8 (tag: v-1.8-rc1) master: edited height - 404.html
+* 775084e master: edited text align- 404.html
+* ba1156f master: edited width - 404.html
+* 2c08c31 master: edited font-family - 404.html
+* f0f7a35 master: edited line-height - 404.html
+* a5b6244 master: changed title - index.html
+* a350f87 setup repo
+Hello! You are in:demo-tag (master):
+$git tag --list
+v-1.8-rc1
+v-1.9-rc2
+v-1.9.1
+Hello! You are in:demo-tag (master):
+$git show 1.9.1
+fatal: ambiguous argument '1.9.1': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+Hello! You are in:demo-tag (master):
+$git show v-1.9.1
+tag v-1.9.1
+Tagger: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 20 10:19:19 2017 +0000
+
+Release Version 1.9.1
+
+commit 8cac70d0c3f3b797e853733dedd648d2065c9c69 (HEAD -> master, tag: v-1.9.1)
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 20 10:18:21 2017 +0000
+
+    master: modified css -index.html
+
+diff --git a/index.html b/index.html
+index 54ccf92..96fab78 100644
+--- a/index.html
++++ b/index.html
+@@ -11,7 +11,7 @@
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+-        <link rel="stylesheet" href="css/normalize.min.css">
++        <link rel="stylesheet" href="css/normalize.css">
+         <link rel="stylesheet" href="css/main.css">
+
+         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>

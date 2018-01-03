@@ -1,0 +1,7 @@
+Hello! You are in:business-venture (master *):
+$git difftool
+Hello! You are in:business-venture (master *):
+$git difftool --major-milestones
+error: invalid option: --major-milestones
+Hello! You are in:business-venture (master *):
+$git difftool -- major-milestones

@@ -1,0 +1,106 @@
+Hello! You are in:demo-merge (master +):
+$git commit -m "name added"
+[master 592d205] name added
+ 1 file changed, 1 insertion(+)
+Hello! You are in:demo-merge (master):
+$git log --oneline
+592d205 (HEAD -> master) name added
+5ada406 robotic intelligence
+227a295 all artifacts commited
+Hello! You are in:demo-merge (master):
+$clear
+Hello! You are in:demo-merge (master):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-merge (master):
+$git branch
+* master
+Hello! You are in:demo-merge (master):
+$git checkout -b ff-branch
+Switched to a new branch 'ff-branch'
+Hello! You are in:demo-merge (ff-branch):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-merge (ff-branch):
+$subl humans.txt
+Hello! You are in:demo-merge (ff-branch):
+$git add humans.txt
+warning: LF will be replaced by CRLF in humans.txt.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-merge (ff-branch +):
+$git commit -m "human responsibility"
+[ff-branch bd27d13] human responsibility
+ 1 file changed, 1 insertion(+)
+Hello! You are in:demo-merge (ff-branch):
+$git log -oneline
+fatal: unrecognized argument: -oneline
+Hello! You are in:demo-merge (ff-branch):
+$git log --oneline
+bd27d13 (HEAD -> ff-branch) human responsibility
+592d205 (master) name added
+5ada406 robotic intelligence
+227a295 all artifacts commited
+Hello! You are in:demo-merge (ff-branch):
+$gti checkout master
+bash: gti: command not found
+Hello! You are in:demo-merge (ff-branch):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-merge (master):
+$git diff master ff-branch
+diff --git a/humans.txt b/humans.txt
+index 5b037cf..54c99f1 100644
+--- a/humans.txt
++++ b/humans.txt
+@@ -1,5 +1,6 @@
+ # humanstxt.org/
+ # The humans responsible & technology colophon
++# Humans have both individual and collective responsibility
+
+ # TEAM
+
+Hello! You are in:demo-merge (master):
+$git difftool master ff-branch
+
+Hello! You are in:demo-merge (master):
+$
+Hello! You are in:demo-merge (master):
+$git merge ff-branch
+Updating 592d205..bd27d13
+Fast-forward
+ humans.txt | 1 +
+ 1 file changed, 1 insertion(+)
+Hello! You are in:demo-merge (master):
+$git log --oneline --decorate --graph
+* bd27d13 (HEAD -> master, ff-branch) human responsibility
+* 592d205 name added
+* 5ada406 robotic intelligence
+* 227a295 all artifacts commited
+Hello! You are in:demo-merge (master):
+$git branch
+  ff-branch
+* master
+Hello! You are in:demo-merge (master):
+$git branch -d ff-branch
+Deleted branch ff-branch (was bd27d13).
+Hello! You are in:demo-merge (master):
+$git branch
+* master
+Hello! You are in:demo-merge (master):
+$git log --oneline --decorate --graph
+* bd27d13 (HEAD -> master) human responsibility
+* 592d205 name added
+* 5ada406 robotic intelligence
+* 227a295 all artifacts commited
+Hello! You are in:demo-merge (master):
+$subl humans.txt

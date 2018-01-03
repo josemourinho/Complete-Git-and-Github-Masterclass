@@ -1,0 +1,136 @@
+Hello! You are in:demo-stash (master):
+$ls
+404.html              index.html
+apple-touch-icon.png  js/
+browserconfig.xml     new-file.txt
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-stash (master):
+$git stash list
+Hello! You are in:demo-stash (master):
+$subl index.html
+Hello! You are in:demo-stash (master):
+$git add index.html
+Hello! You are in:demo-stash (master +):
+$subl 404.html
+Hello! You are in:demo-stash (master +):
+$git add 404.html
+Hello! You are in:demo-stash (master +):
+$git status -s
+M  404.html
+M  index.html
+Hello! You are in:demo-stash (master +):
+$subl new-file-2.txt
+Hello! You are in:demo-stash (master +):
+$git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   404.html
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what                                                                   will be committed)
+
+        new-file-2.txt
+
+Hello! You are in:demo-stash (master +):
+$git rm -- cached new-file-2.txt
+fatal: pathspec 'cached' did not match any fil                                                                  es
+Hello! You are in:demo-stash (master +):
+$git rm --cached new-file-2.txt
+fatal: pathspec 'new-file-2.txt' did not match                                                                   any files
+Hello! You are in:demo-stash (master +):
+$git reset index.html
+Unstaged changes after reset:
+M       index.html
+Hello! You are in:demo-stash (master *+):
+$git status -s
+M  404.html
+ M index.html
+?? new-file-2.txt
+Hello! You are in:demo-stash (master *+):
+$git stash -u
+Saved working directory and index state WIP on                                                                   master: 1a2a70b browserconfig.xml committed
+Hello! You are in:demo-stash (master):
+$git stash list
+stash@{0}: WIP on master: 1a2a70b browserconfi                                                                  g.xml committed
+Hello! You are in:demo-stash (master):
+$git stash branch demobranch
+Switched to a new branch 'demobranch'
+On branch demobranch
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   404.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will                                                                   be committed)
+  (use "git checkout -- <file>..." to discard                                                                   changes in working directory)
+
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what                                                                   will be committed)
+
+        new-file-2.txt
+
+Dropped refs/stash@{0} (72c5e509cdad5956e02a5d                                                                  e842ef17a782334057)
+Hello! You are in:demo-stash (demobranch *+):
+$git stash list
+Hello! You are in:demo-stash (demobranch *+):
+$git add .
+Hello! You are in:demo-stash (demobranch +):
+$git commit -m "3 files changed"
+[demobranch 4296bbc] 3 files changed
+ 3 files changed, 3 insertions(+), 2 deletions                                                                  (-)
+ create mode 100644 new-file-2.txt
+Hello! You are in:demo-stash (demobranch):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-stash (master):
+$git merge demobranch
+Updating 1a2a70b..4296bbc
+Fast-forward
+ 404.html       | 2 +-
+ index.html     | 2 +-
+ new-file-2.txt | 1 +
+ 3 files changed, 3 insertions(+), 2 deletions                                                                  (-)
+ create mode 100644 new-file-2.txt
+Hello! You are in:demo-stash (master):
+$ git branch -d demobranch
+Deleted branch demobranch (was 4296bbc).
+Hello! You are in:demo-stash (master):
+$git log --oneline --decorate --graph --all
+* 4296bbc (HEAD -> master) 3 files changed
+* 1a2a70b browserconfig.xml committed
+* 3a683a9 index.html committed
+* 1367e80 404.html committed
+* 29e305c new-file.txt committed
+| * b1e14f3 (hotfix) fixed humans.txt [4]
+| * bade401 fixed humans.txt [3]
+| * ea2ce8f fixed humans.txt [2]
+| * cea518d fixed humans.txt
+|/
+* a2bb595 setup repository
+Hello! You are in:demo-stash (master):
+$git branch
+  hotfix
+* master
+Hello! You are in:demo-stash (master):
+$ git branch -d hotfix
+error: The branch 'hotfix' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D hotfix'.
+Hello! You are in:demo-stash (master):
+$git branch -D hotfix
+Deleted branch hotfix (was b1e14f3).
+Hello! You are in:demo-stash (master):
+$git log --oneline --decorate --graph --all
+* 4296bbc (HEAD -> master) 3 files changed
+* 1a2a70b browserconfig.xml committed
+* 3a683a9 index.html committed
+* 1367e80 404.html committed
+* 29e305c new-file.txt committed
+* a2bb595 setup repository

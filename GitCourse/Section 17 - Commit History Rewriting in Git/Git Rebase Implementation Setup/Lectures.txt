@@ -1,0 +1,82 @@
+Hello! You are in:demo-rebase (master +)                                                        :
+$git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to uns                                                        tage)
+
+        modified:   humans.txt
+
+Hello! You are in:demo-rebase (master +)                                                        :
+$git add humans.txt
+Hello! You are in:demo-rebase (master +)                                                        :
+$git commit -m "master: added team infor                                                        mation - humans.txt"
+[master 8565ac6] master: added team info                                                        rmation - humans.txt
+ 1 file changed, 1 insertion(+), 1 delet                                                        ion(-)
+Hello! You are in:demo-rebase (master):
+$git checkout -b top-feature
+Switched to a new branch 'top-feature'
+Hello! You are in:demo-rebase (top-featu                                                        re):
+$subl index.html
+Hello! You are in:demo-rebase (top-featu                                                        re):
+$git add index.html
+warning: LF will be replaced by CRLF in                                                         index.html.
+The file will have its original line end                                                        ings in your working directory.
+Hello! You are in:demo-rebase (top-featu                                                        re +):
+$git commit -m "top-feature: modified ti                                                        tle - index.html"
+[top-feature 0f8c699] top-feature: modif                                                        ied title - index.html
+ 1 file changed, 1 insertion(+), 1 delet                                                        ion(-)
+Hello! You are in:demo-rebase (top-featu                                                        re):
+$subl index.html                                                                                Hello! You are in:demo-rebase (top-featu                                                        re):
+$git add index.html                                                                             warning: LF will be replaced by CRLF in                                                         index.html.
+The file will have its original line end                                                        Hello! You are in:demo-rebase (top-featu                                                        re +):
+$git commit -m "top-feature: browser upg                                                        rade recommendation - index.html"
+[top-feature e69c898] top-feature: brows                                                        er upgrade recommendation - index.html
+ 1 file changed, 1 insertion(+), 1 delet                                                        ion(-)
+Hello! You are in:demo-rebase (top-featu                                                        re):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-rebase (master):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-rebase (master):
+$subl 404.html
+Hello! You are in:demo-rebase (master):
+$git add 404.html
+warning: LF will be replaced by CRLF in                                                         404.html.
+The file will have its original line end                                                        ings in your working directory.
+Hello! You are in:demo-rebase (master +)                                                        :
+$git commit -m "master: modified title -                                                         404.html"
+[master 142ed63] master: modified title                                                         - 404.html
+ 1 file changed, 1 insertion(+), 1 delet                                                        ion(-)
+Hello! You are in:demo-rebase (master):
+$subl 404.html
+Hello! You are in:demo-rebase (master):
+$git add 404.html
+warning: LF will be replaced by CRLF in                                                         404.html.
+The file will have its original line end                                                        ings in your working directory.
+Hello! You are in:demo-rebase (master +)                                                        :
+$git commit -m "master: modified font fa                                                        mily - 404.html"
+[master 6201485] master: modified font f                                                        amily - 404.html
+ 1 file changed, 1 insertion(+), 1 delet                                                        ion(-)
+Hello! You are in:demo-rebase (master):
+$git log --oneline --decorate --graph --                                                        all
+* 6201485 (HEAD -> master) master: modif                                                        ied font family - 404.html
+* 142ed63 master: modified title - 404.h                                                        tml
+| * e69c898 (top-feature) top-feature: b                                                        rowser upgrade recommendation - index.ht                                                        ml
+| * 0f8c699 top-feature: modified title                                                         - index.html
+|/
+* 8565ac6 master: added team information                                                        :...skipping...
+* 6201485 (HEAD -> master) master: modified font family - 404.html
+* 142ed63 master: modified title - 404.html
+| * e69c898 (top-feature) top-feature: browser upgrade recommendation - index.html
+| * 0f8c699 top-feature: modified title - index.html
+|/
+* 8565ac6 master: added team information - humans.txt
+* 5b2be6e master: added name - humans.txt
+* 69f739b setting up repository
+~

@@ -1,0 +1,43 @@
+git clone <web address of person you want to copy from>
+
+remote: Total 423 (delta 0), reused 0 (delta 0), pack-reused 423
+Receiving objects: 100% (423/423), 67.37 KiB | 179.00 KiB/s, done.
+Resolving deltas: 100% (169/169), done.
+
+conor@DESKTOP-EQ6OSL2 MINGW64 ~/git-fast
+$ ls -l
+total 4
+drwxr-xr-x 1 conor 197121 0 Nov 24 15:35 myRepoFromScratch/
+drwxr-xr-x 1 conor 197121 0 Nov 24 19:55 sample-java-project/
+
+conor@DESKTOP-EQ6OSL2 MINGW64 ~/git-fast
+$ clear
+
+conor@DESKTOP-EQ6OSL2 MINGW64 ~/git-fast
+$ ls -l
+total 8
+drwxr-xr-x 1 conor 197121 0 Nov 24 18:58 myRepoFromExistingSource/
+drwxr-xr-x 1 conor 197121 0 Nov 24 15:35 myRepoFromScratch/
+drwxr-xr-x 1 conor 197121 0 Nov 24 19:55 sample-java-project/
+
+conor@DESKTOP-EQ6OSL2 MINGW64 ~/git-fast
+$ cd sample-java-project/
+
+conor@DESKTOP-EQ6OSL2 MINGW64 ~/git-fast/sample-java-project (master)
+$ ls -al
+total 54
+drwxr-xr-x 1 conor 197121    0 Nov 24 19:55 ./
+drwxr-xr-x 1 conor 197121    0 Nov 24 19:57 ../
+drwxr-xr-x 1 conor 197121    0 Nov 24 19:55 .git/
+-rw-r--r-- 1 conor 197121   37 Nov 24 19:55 .gitignore
+-rw-r--r-- 1 conor 197121 8769 Nov 24 19:55 build.xml
+-rw-r--r-- 1 conor 197121 7596 Nov 24 19:55 checkstyle.xml
+-rw-r--r-- 1 conor 197121 1399 Nov 24 19:55 ivy.xml
+-rw-r--r-- 1 conor 197121 1381 Nov 24 19:55 pmd.xml
+-rw-r--r-- 1 conor 197121  843 Nov 24 19:55 pom.xml
+-rw-r--r-- 1 conor 197121  405 Nov 24 19:55 project.properties
+-rw-r--r-- 1 conor 197121 2405 Nov 24 19:55 README.md
+drwxr-xr-x 1 conor 197121    0 Nov 24 19:55 src/
+drwxr-xr-x 1 conor 197121    0 Nov 24 19:55 test/
+-rw-r--r-- 1 conor 197121 1235 Nov 24 19:55 UNLICENSE
+

@@ -1,0 +1,62 @@
+Hello! You are in:demo-fetch (master):
+$git log --oneline --decorate --graph --all
+* a9b7231 (origin/master) remote-origin: modified width - 404.html
+* 7523b07 remote-origin: modified title - 404.html
+* b90d853 (HEAD -> master) local: modified image - index.html
+* 966436a local: added title - index.html
+* 19692a1 setup repository
+Hello! You are in:demo-fetch (master):
+$clear
+Hello! You are in:demo-fetch (master):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-fetch (master):
+$git log --oneline --decorate --graph --all
+* a9b7231 (origin/master) remote-origin: modif
+* 7523b07 remote-origin: modified title - 404.
+* b90d853 (HEAD -> master) local: modified ima
+* 966436a local: added title - index.html
+* 19692a1 setup repository
+Hello! You are in:demo-fetch (master):
+$git clean -n
+Hello! You are in:demo-fetch (master):
+$git log --oneline origin/master
+a9b7231 (origin/master) remote-origin: modifie
+7523b07 remote-origin: modified title - 404.ht
+b90d853 (HEAD -> master) local: modified image
+966436a local: added title - index.html
+19692a1 setup repository
+Hello! You are in:demo-fetch (master):
+$git fetch demo-fetch
+fatal: 'demo-fetch' does not appear to be a gi
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access r
+and the repository exists.
+Hello! You are in:demo-fetch (master):
+$git fetch
+Hello! You are in:demo-fetch (master):
+$git log --oneline origin/master
+a9b7231 (origin/master) remote-origin: modifie
+7523b07 remote-origin: modified title - 404.ht
+b90d853 (HEAD -> master) local: modified image
+966436a local: added title - index.html
+19692a1 setup repository
+Hello! You are in:demo-fetch (master):
+$git branch -r
+  origin/master
+Hello! You are in:demo-fetch (master):
+$git branch -a
+* master
+  remotes/origin/master
+Hello! You are in:demo-fetch (master):
+$git merge origin/master
+Updating b90d853..a9b7231
+Fast-forward
+ 404.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)

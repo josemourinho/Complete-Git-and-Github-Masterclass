@@ -1,0 +1,42 @@
+Hello! You are in:business-venture (feat                                                        ure_branch *):
+$subl major-milestones
+Hello! You are in:business-venture (feat                                                        ure_branch *):
+$git diff HEAD
+diff --git a/major-milestones b/major-mi                                                        lestones
+index 12d591e..d1fbd38 100644
+--- a/major-milestones
++++ b/major-milestones
+@@ -2,11 +2,12 @@ MAJOR MILESTONES:
+
+ -- Formation of a public limited compan                                                        y (1 June)
+ -- Core team formed including CEO, VPs,                                                         CTO (16 July)
+--- Hiring and forming the development t                                                        :...skipping...
+diff --git a/major-milestones b/major-milestones
+index 12d591e..d1fbd38 100644
+--- a/major-milestones
++++ b/major-milestones
+@@ -2,11 +2,12 @@ MAJOR MILESTONES:
+
+ -- Formation of a public limited company (1 June)
+ -- Core team formed including CEO, VPs, CTO (16 July)
+--- Hiring and forming the development team
++-- Hiring and forming the development team back in time
+ -- Hiring and forming the hr, administrative and purchasing departments
+ -- Admin dept purchases office stationary, purchasing department buys office equipment
+ -- We have developed an MVP for demo
+ -- Demonstrating our MVP to major prospective clients
+ -- Launching creation of Beta product
+ -- Beta product launched
+--- Release of Beta product
+\ No newline at end of file
++-- Release of Beta product
++-- Press release of successful beta product
+\ No newline at end of file
+~
+~
+~
+~
+~
+~
+Hello! You are in:business-venture (feature_branch *):
+$git difftool HEAD

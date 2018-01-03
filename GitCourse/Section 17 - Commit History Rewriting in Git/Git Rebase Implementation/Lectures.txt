@@ -1,0 +1,55 @@
+Hello! You are in:demo-rebase (master):
+$git log --oneline --decorate --graph --all
+* 6201485 (HEAD -> master) master: modified fo
+* 142ed63 master: modified title - 404.html
+| * e69c898 (top-feature) top-feature: browser
+| * 0f8c699 top-feature: modified title - inde
+|/
+* 8565ac6 master: added team information - hum
+* 5b2be6e master: added name - humans.txt
+* 69f739b setting up repository
+Hello! You are in:demo-rebase (master):
+$git checkout top-feature
+Switched to branch 'top-feature'
+Hello! You are in:demo-rebase (top-feature):
+$git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: top-feature: modified title - index.html
+Applying: top-feature: browser upgrade recommendation - index.html
+Hello! You are in:demo-rebase (top-feature):
+$git log --oneline --decorate --graph --all
+* f5f66dd (HEAD -> top-feature) top-feature: browser upgrade recommendation - index.html
+* c26f58c top-feature: modified title - index.html
+* 6201485 (master) master: modified font family - 404.html
+* 142ed63 master: modified title - 404.html
+* 8565ac6 master: added team information - humans.txt
+* 5b2be6e master: added name - humans.txt
+* 69f739b setting up repository
+Hello! You are in:demo-rebase (top-feature):
+$git checkout master
+Switched to branch 'master'
+gitHello! You are in:demo-rebase (master):
+$git merge top-feature
+Updating 6201485..f5f66dd
+Fast-forward
+ index.html | 4 ++--
+Hello! You are in:demo-rebase (master):etions($git log --oneline --decorate --graph --all
+* f5f66dd (HEAD -> master, top-feature) top-feature: browser upgrade recommendation - index.html
+* c26f58c top-feature: modified title - index.html
+* 6201485 master: modified font family - 404.html
+* 142ed63 master: modified title - 404.html
+* 8565ac6 master: added team information - humans.txt
+* 5b2be6e master: added name - humans.txt
+* 69f739b setting up repository
+Hello! You are in:demo-rebase (master):
+$git branch -d top-feature
+Deleted branch top-feature (was f5f66dd).
+Hello! You are in:demo-rebase (master):
+$git log --oneline --decorate --graph --all
+* f5f66dd (HEAD -> master) top-feature: browser upgrade recommendation - index.html
+* c26f58c top-feature: modified title - index.html
+* 6201485 master: modified font family - 404.html
+* 142ed63 master: modified title - 404.html
+* 8565ac6 master: added team information - humans.txt
+* 5b2be6e master: added name - humans.txt
+* 69f739b setting up repository

@@ -1,0 +1,87 @@
+Hello! You are in:demo-merge (master):
+$git branch
+* master
+Hello! You are in:demo-merge (master):
+$git log --oneline --decorate --graph
+* bd27d13 (HEAD -> master) human responsibility
+* 592d205 name added
+* 5ada406 robotic intelligence
+* 227a295 all artifacts commited
+Hello! You are in:demo-merge (master):
+$subl humans.txt
+Hello! You are in:demo-merge (master):
+$clear
+Hello! You are in:demo-merge (master):
+$git branch
+* master
+Hello! You are in:demo-merge (master):
+$git checkout -b no-ff-branch
+Switched to a new branch 'no-ff-branch'
+Hello! You are in:demo-merge (no-ff-branch):
+$subl robots.txt
+Hello! You are in:demo-merge (no-ff-branch):
+$git add robots.txt
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-merge (no-ff-branch +):
+$git commit -m "robots serve humans"
+[no-ff-branch 34888e1] robots serve humans
+ 1 file changed, 1 insertion(+)
+Hello! You are in:demo-merge (no-ff-branch):
+$subl humans.txt
+Hello! You are in:demo-merge (no-ff-branch):
+$git add humans.txt
+warning: LF will be replaced by CRLF in humans.txt.
+The file will have its original line endings iHello! You are in:demo-merge (no-ff-branch +):
+$git commit -m "social being"
+[no-ff-branch 8ded021] social being
+ 1 file changed, 1 insertion(+)
+Hello! You are in:demo-merge (no-ff-branch):
+$git log --oneline --decorate --graph
+* 8ded021 (HEAD -> no-ff-branch) social being
+* 34888e1 robots serve humans
+* bd27d13 (master) human responsibility
+* 592d205 name added
+* 5ada406 robotic intelligence
+* 227a295 all artifacts commited
+Hello! You are in:demo-merge (no-ff-branch):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-merge (master):
+$git difftool master no-ff-branch
+Hello! You are in:demo-merge (master):
+$git merge no-ff-branch --no-ff
+Merge made by the 'recursive' strategy.
+ humans.txt | 1 +
+ robots.txt | 1 +
+ 2 files changed, 2 insertions(+)
+Hello! You are in:demo-merge (master):
+$git log --oneline --decorate --graph
+*   32338f1 (HEAD -> master) Merge branch 'no-ff-branch'
+|\
+| * 8ded021 (no-ff-branch) social being
+| * 34888e1 robots serve humans
+|/
+* bd27d13 human responsibility
+* 592d205 name added
+* 5ada406 robotic intelligence
+* 227a295 all artifacts commited
+Hello! You are in:demo-merge (master):
+$git branch -d no-ff-branch
+Deleted branch no-ff-branch (was 8ded021).
+Hello! You are in:demo-merge (master):
+$git branch
+* master
+Hello! You are in:demo-merge (master):
+$git log --oneline --decorate --graph
+*   32338f1 (HEAD -> master) Merge branch 'no-ff-branch'
+|\
+| * 8ded021 social being
+| * 34888e1 robots serve humans
+|/
+* bd27d13 human responsibility
+* 592d205 name added
+* 5ada406 robotic intelligence
+* 227a295 all artifacts commited
+Hello! You are in:demo-merge (master):
+$subl humans.txt

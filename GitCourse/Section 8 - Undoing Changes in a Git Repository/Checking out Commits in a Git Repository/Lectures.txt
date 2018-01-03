@@ -1,0 +1,211 @@
+myRepoFromExisitingSource/
+MyRepoFromScratch/
+sample-java-project/
+Hello! You are in:git-fast:
+$cp cp /c/Users/conor/Downloads/initializr-verekia-4.0.zip .
+cp: cannot stat 'cp': No such file or directory
+Hello! You are in:git-fast:
+$cp /c/Users/conor/Downloads/initializr-verekia-4.0.zip .
+Hello! You are in:git-fast:
+$clear
+Hello! You are in:git-fast:
+$ls
+git-with-github-demo/
+initializr-verekia-4.0.zip
+myRepoFromExisitingSource/
+MyRepoFromScratch/
+sample-java-project/
+Hello! You are in:git-fast:
+$unzip initializr-verekia-4.0.zip
+Archive:  initializr-verekia-4.0.zip
+  inflating: initializr/index.html
+  inflating: initializr/css/main.css
+  inflating: initializr/js/main.js
+  inflating: initializr/js/plugins.js
+  inflating: initializr/404.html
+  inflating: initializr/js/vendor/jquery-1.11.2.min.js
+  inflating: initializr/css/normalize.css
+  inflating: initializr/css/normalize.min.css
+  inflating: initializr/robots.txt
+  inflating: initializr/apple-touch-icon.png
+  inflating: initializr/browserconfig.xml
+  inflating: initializr/tile-wide.png
+  inflating: initializr/tile.png
+  inflating: initializr/favicon.ico
+  inflating: initializr/humans.txt
+  inflating: initializr/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js
+   creating: initializr/img/
+Hello! You are in:git-fast:
+$ls
+git-with-github-demo/
+initializr/
+initializr-verekia-4.0.zip
+myRepoFromExisitingSource/
+MyRepoFromScratch/
+sample-java-project/
+Hello! You are in:git-fast:
+$mkdir demo-checkout-commit
+Hello! You are in:git-fast:
+$cp -rf initializr/* demo-checkout-commit
+Hello! You are in:git-fast:
+$rm -rf initializr
+Hello! You are in:git-fast:
+$cd demo-checkout-commit/
+Hello! You are in:demo-checkout-commit:
+$git init
+Initialized empty Git repository in C:/Users/conor/git-fast/demo-checkout-commit/.git/
+Hello! You are in:demo-checkout-commit (master #):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-checkout-commit (master #):
+$git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        404.html
+        apple-touch-icon.png
+        browserconfig.xml
+        css/
+        favicon.ico
+        humans.txt
+        index.html
+        js/
+        robots.txt
+        tile-wide.png
+        tile.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+Hello! You are in:demo-checkout-commit (master #):
+$git add .
+warning: LF will be replaced by CRLF in 404.html.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in browserconfig.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in css/main.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in css/normalize.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in humans.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in js/main.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in js/plugins.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in js/vendor/jquery-1.11.2.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in js/vendor/modernizr-2.8.3-respond-1.4.2.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-checkout-commit (master +):
+$git commit -m "all files committed"
+[master (root-commit) fe2c3d2] all files committed
+ 16 files changed, 1022 insertions(+)
+ create mode 100644 404.html
+ create mode 100644 apple-touch-icon.png
+ create mode 100644 browserconfig.xml
+ create mode 100644 css/main.css
+ create mode 100644 css/normalize.css
+ create mode 100644 css/normalize.min.css
+ create mode 100644 favicon.ico
+ create mode 100644 humans.txt
+ create mode 100644 index.html
+ create mode 100644 js/main.js
+ create mode 100644 js/plugins.js
+ create mode 100644 js/vendor/jquery-1.11.2.min.js
+ create mode 100644 js/vendor/modernizr-2.8.3-respond-1.4.2.min.js
+ create mode 100644 robots.txt
+ create mode 100644 tile-wide.png
+ create mode 100644 tile.png
+Hello! You are in:demo-checkout-commit (master):
+$git status
+On branch master
+nothing to commit, working tree clean
+Hello! You are in:demo-checkout-commit (master):
+$vi robots.txt
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-checkout-commit (master *):
+$git commit -am "1st commit - robot.txt"
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+[master 6c69070] 1st commit - robot.txt
+ 1 file changed, 2 insertions(+)
+Hello! You are in:demo-checkout-commit (master):
+$git log --oneline
+6c69070 (HEAD -> master) 1st commit - robot.txt
+fe2c3d2 all files committed
+Hello! You are in:demo-checkout-commit (master):
+$vi robots.txt
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-checkout-commit (master *):
+$git commit -am "2nd commit - robot.txt"
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+[master a39afe0] 2nd commit - robot.txt
+ 1 file changed, 1 insertion(+)
+Hello! You are in:demo-checkout-commit (master):
+$vi robots.txt
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-checkout-commit (master *):
+$git commit -am "3rd commit - robot.txt"
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+[master 79d8470] 3rd commit - robot.txt
+ 1 file changed, 1 insertion(+)
+Hello! You are in:demo-checkout-commit (master):
+$vi robots.txt
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-checkout-commit (master *):
+$git commit -am "4th commit - robot.txt"
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+[master 24ccff2] 4th commit - robot.txt
+ 1 file changed, 1 insertion(+)
+Hello! You are in:demo-checkout-commit (master):
+$vi robots.txt
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-checkout-commit (master *):
+$git commit -am "5th commit - robot.txt"
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+[master 8c9eb47] 5th commit - robot.txt
+ 1 file changed, 1 insertion(+)
+Hello! You are in:demo-checkout-commit (master):
+$git log --oneline
+8c9eb47 (HEAD -> master) 5th commit - robot.txt
+24ccff2 4th commit - robot.txt
+79d8470 3rd commit - robot.txt
+a39afe0 2nd commit - robot.txt
+6c69070 1st commit - robot.txt
+fe2c3d2 all files committed
+Hello! You are in:demo-checkout-commit (master):
+$git checkout a39afe0
+Note: checking out 'a39afe0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at a39afe0... 2nd commit - robot.txt
+Hello! You are in:demo-checkout-commit ((a39afe0...)):

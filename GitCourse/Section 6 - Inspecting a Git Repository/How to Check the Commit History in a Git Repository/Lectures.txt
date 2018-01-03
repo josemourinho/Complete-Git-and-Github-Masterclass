@@ -1,0 +1,58 @@
+Hello! You are in:MyRepoFromScratch (master *):
+$vi demoFile3
+Hello! You are in:MyRepoFromScratch (master *):
+$git log
+commit 0a23ee9f7e5bdf0a610bca32268305975ed0e56c (HEAD -> master)
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 6 15:54:03 2017 +0000
+
+    Second commit for weightLossChart
+
+commit 5ae35a7395460708fadfe6c4113eade1694016fd
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 6 15:51:58 2017 +0000
+
+    First commit for weightLossChart
+
+commit 62f946ba0e1e1e34d8e70d6d94594b7fc9eb3322
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 6 15:31:02 2017 +0000
+
+    our first commit in this course
+Hello! You are in:MyRepoFromScratch (master *):
+$git log --oneline
+0a23ee9 (HEAD -> master) Second commit for weightLossChart
+5ae35a7 First commit for weightLossChart
+62f946b our first commit in this course
+Hello! You are in:MyRepoFromScratch (master *):
+$ls -l
+total 6
+-rw-r--r-- 1 conor 197121 60 Dec  6 15:22 demoFile1
+-rw-r--r-- 1 conor 197121 26 Dec  6 16:38 demoFile3
+-rw-r--r-- 1 conor 197121 48 Dec  6 15:48 dietChart
+-rw-r--r-- 1 conor 197121 41 Dec  6 11:25 FirstFileUsingEcho.txt
+-rw-r--r-- 1 conor 197121 40 Dec  6 11:27 SecondFileUsingVI.txt
+-rw-r--r-- 1 conor 197121 51 Dec  6 15:52 weightLossChart2
+Hello! You are in:MyRepoFromScratch (master *):
+$git log demofile1
+Hello! You are in:MyRepoFromScratch (master *):
+$git log demoFile1
+commit 62f946ba0e1e1e34d8e70d6d94594b7fc9eb3322
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 6 15:31:02 2017 +0000
+
+    our first commit in this course
+Hello! You are in:MyRepoFromScratch (master *):
+$git log --oneline
+0a23ee9 (HEAD -> master) Second commit for weightLossChart
+5ae35a7 First commit for weightLossChart
+62f946b our first commit in this course
+Hello! You are in:MyRepoFromScratch (master *):
+$git log 62f946b..0a23ee9 --oneline
+0a23ee9 (HEAD -> master) Second commit for weightLossChart
+5ae35a7 First commit for weightLossChart
+Hello! You are in:MyRepoFromScratch (master *):
+$git log -n 2 --oneline
+0a23ee9 (HEAD -> master) Second commit for weightLossChart
+5ae35a7 First commit for weightLossChart
+

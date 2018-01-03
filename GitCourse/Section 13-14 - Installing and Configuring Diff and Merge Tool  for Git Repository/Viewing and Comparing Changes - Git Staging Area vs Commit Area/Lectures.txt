@@ -1,0 +1,105 @@
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   major-milestones
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Hello! You are in:business-venture (master *):
+$git diff HEAD
+diff --git a/major-milestones b/major-milestones
+index 06b8bb9..2b3167f 100644
+--- a/major-milestones
++++ b/major-milestones
+@@ -1,4 +1,5 @@
+ MAJOR MILESTONES:
+
+ -- Formation of a public limited company (1 June)
+--- Core team formed including CEO, VPs, CTO (16 July)
+\ No newline at end of file
++-- Core team formed including CEO, VPs, CTO (16 July)
++-- Hiring and forming the development team
+\ No newline at end of file
+Hello! You are in:business-venture (master *):
+$git difftool HEAD
+Hello! You are in:business-venture (master *):
+$clear
+Hello! You are in:business-venture (master *):
+$subl major-milestones
+Hello! You are in:business-venture (master *):
+$git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   major-milestones
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Hello! You are in:business-venture (master *):
+$git add major-milestones
+Hello! You are in:business-venture (master +):
+$subl major-milestones
+Hello! You are in:business-venture (master +):
+$git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   major-milestones
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   major-milestones
+
+Hello! You are in:business-venture (master *+):
+$git diff --stages
+error: invalid option: --stages
+Hello! You are in:business-venture (master *+):
+$git diff --staged
+diff --git a/major-milestones b/major-milestones
+index 06b8bb9..3f9f908 100644
+--- a/major-milestones
++++ b/major-milestones
+@@ -1,4 +1,6 @@
+ MAJOR MILESTONES:
+
+ -- Formation of a public limited company (1 June)
+--- Core team formed including CEO, VPs, CTO (16 July)
+\ No newline at end of file
++-- Core team formed including CEO, VPs, CTO (16 July)
++-- Hiring and forming the development team
++-- Product development process launched
+\ No newline at end of file
+Hello! You are in:business-venture (master *+):
+$git diff --staged HEAD
+diff --git a/major-milestones b/major-milestones
+index 06b8bb9..3f9f908 100644
+--- a/major-milestones
++++ b/major-milestones
+@@ -1,4 +1,6 @@
+ MAJOR MILESTONES:
+
+ -- Formation of a public limited company (1 June)
+--- Core team formed including CEO, VPs, CTO (16 July)
+\ No newline at end of file
++-- Core team formed including CEO, VPs, CTO (16 July)
++-- Hiring and forming the development team
++-- Product development process launched
+\ No newline at end of file
+Hello! You are in:business-venture (master *+):
+$git difftool
+
+Hello! You are in:business-venture (master *+):
+$git difftoo --staged HEAD
+git: 'difftoo' is not a git command. See 'git --help'.
+
+The most similar command is
+Hello! You are in:business-venture (master *+):
+$git difftool --staged HEAD
+Hello! You are in:business-venture (master *+):
+$git difftool --cached HEAD
+

@@ -1,0 +1,47 @@
+Hello! You are in:demo-tag (master):
+$git log --oneline
+8cac70d (HEAD -> master, tag: v-1.9.1) master: modified css -index.html
+0712f99 master: modified title -index.html
+5639dc8 (tag: v-1.8-rc1) master: edited height - 404.html
+775084e master: edited text align- 404.html
+ba1156f master: edited width - 404.html
+2c08c31 master: edited font-family - 404.html
+f0f7a35 master: edited line-height - 404.html
+a5b6244 master: changed title - index.html
+a350f87 setup repo
+Hello! You are in:demo-tag (master):
+$git show v-1.9.1
+tag v-1.9.1
+Tagger: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 20 10:19:19 2017 +0000
+
+Release Version 1.9.1
+
+commit 8cac70d0c3f3b797e853733dedd648d2065c9c69 (HEAD -> master, tag: v-1.9.1)
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 20 10:18:21 2017 +0000
+
+    master: modified css -index.html
+
+diff --git a/index.html b/index.html
+index 54ccf92..96fab78 100644
+--- a/index.html
++++ b/index.html
+@@ -11,7 +11,7 @@
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+-        <link rel="stylesheet" href="css/normalize.min.css">
++        <link rel="stylesheet" href="css/normalize.css">
+         <link rel="stylesheet" href="css/main.css">
+
+         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+Hello! You are in:demo-tag (master):
+$
+Hello! You are in:demo-tag (master):
+$git cat-file -t  v-1.9.1
+tag
+Hello! You are in:demo-tag (master):
+$git cat-file -t  v-1.8-rc1
+commit

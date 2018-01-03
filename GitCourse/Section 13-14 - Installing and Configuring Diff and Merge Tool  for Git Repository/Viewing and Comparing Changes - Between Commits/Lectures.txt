@@ -1,0 +1,243 @@
+147d33d 1st commit - all starter docs
+Hello! You are in:business-venture (mast
+$subl major-milestones
+Hello! You are in:business-venture (mast
+$git add major-milestones
+Hello! You are in:business-venture (mast
+$git commit -m "Formed development team"
+[master ba56601] Formed development team
+ 1 file changed, 1 insertion(+)
+Hello! You are in:business-venture (mast
+$subl major-milestones
+Hello! You are in:business-venture (mast
+Hello! You are in:business-venture (mast
+$git add major-milestones
+Hello! You are in:business-venture (mast
+$git commit -m "Forming various departme
+[master 2eef9cb] Forming various departm
+ 1 file changed, 1 insertion(+)
+Hello! You are in:business-venture (mast
+$git log --oneline
+2eef9cb (HEAD -> master) Forming various
+ba56601 Formed development team
+0938214 Core team formed
+fcb2e80 Company formation done
+147d33d 1st commit - all starter docs
+Hello! You are in:business-venture (mast
+$clear
+Hello! You are in:business-venture (mast
+$git log --oneline
+2eef9cb (HEAD -> master) Forming various
+ba56601 Formed development team
+0938214 Core team formed
+fcb2e80 Company formation done
+147d33d 1st commit - all starter docs
+Hello! You are in:business-venture (mast
+$git diff ba56601 HEAD
+diff --git a/major-milestones b/major-mi
+index 4c40368..b993554 100644
+--- a/major-milestones
++++ b/major-milestones
+@@ -3,3 +3,4 @@ MAJOR MILESTONES:
+ -- Formation of a public limited compan
+ -- Core team formed including CEO, VPs,
+ -- Hiring and forming the development t
++-- Hiring and forming the hr, administr
+\ No newline at end of file
+Hello! You are in:business-venture (mast
+$subl major-milestones
+Hello! You are in:business-venture (mast
+$git difftool ba56601 HEAD
+Hello! You are in:business-venture (mast
+$git difftool HEAD^ HEAD
+Hello! You are in:business-venture (mast
+$git difftool HEAD~1 HEAD
+Hello! You are in:business-venture (mast
+$ls
+administration-doc  major-milestones
+advertising-doc     marketing-doc
+hr-doc              product-development-
+Hello! You are in:business-venture (mast
+$subl marketing doc
+Hello! You are in:business-venture (mast
+$suble marketing-doc
+bash: suble: command not found
+Hello! You are in:business-venture (mast
+$suble marketing doc
+bash: suble: command not found
+Hello! You are in:business-venture (mast
+$subl marketing-doc
+Hello! You are in:business-venture (mast
+$rm marketing doc
+rm: cannot remove 'marketing': No such f
+Hello! You are in:business-venture (mast
+$ls
+administration-doc  major-milestones
+advertising-doc     marketing-doc
+hr-doc              product-development-
+Hello! You are in:business-venture (mast
+$subl sales-doc
+Hello! You are in:business-venture (mast
+$subl marketing-doc
+Hello! You are in:business-venture (mast
+$subl sales-doc
+Hello! You are in:business-venture (mast
+$git commit -am "Added entries to sales
+[master 454ead2] Added entries to sales
+ 1 file changed, 2 insertions(+), 1 dele
+Hello! You are in:business-venture (mast
+$subl major-milestones
+Hello! You are in:business-venture (mast
+$git commit -am "Building an MVP"
+[master f171871] Building an MVP
+ 1 file changed, 2 insertions(+), 1 dele
+Hello! You are in:business-venture (mast
+$git log --oneline
+f171871 (HEAD -> master) Building an MVP
+454ead2 Added entries to sales and marke
+2eef9cb Forming various departments -hr,
+ba56601 Formed development team
+0938214 Core team formed
+fcb2e80 Company formation done
+147d33d 1st commit - all starter docs
+Hello! You are in:business-venture (mast
+$ git diff fcb2e80 454ead2
+diff --git a/major-milestones b/major-mi
+index c0f1546..3f36811 100644
+--- a/major-milestones
++++ b/major-milestones
+@@ -1,3 +1,7 @@
+ MAJOR MILESTONES:
+
+ -- Formation of a public limited compan
++-- Core team formed including CEO, VPs,
++-- Hiring and forming the development t
++-- Hiring and forming the hr, administr
++-- Admin dept purchases office stationa
+\ No newline at end of file
+Hello! You are in:business-venture (mast
+$
+Hello! You are in:business-venture (mast
+$git difftool
+Hello! You are in:business-venture (mast
+$git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in
+
+        administration-doc
+        advertising-doc
+        hr-doc
+        marketing-doc
+        product-development-doc
+        product-release-doc
+        product-testing-doc
+        purchases-doc
+        sales-doc
+
+nothing added to commit but untracked fi
+Hello! You are in:business-venture (mast
+$git reset 2eef9cb
+Unstaged changes after reset:
+M       major-milestones
+Hello! You are in:business-venture (mast
+$subl marketing-doc
+Hello! You are in:business-venture (mast
+$subl marketing-doc
+Hello! You are in:business-venture (mast
+$subl sales-doc
+Hello! You are in:business-venture (mast
+$git add sales-doc
+Hello! You are in:business-venture (mast
+$git add marketing-doc
+Hello! You are in:business-venture (mast
+$git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to uns
+
+        new file:   marketing-doc
+        new file:   sales-doc
+
+Changes not staged for commit:
+  (use "git add <file>..." to update wha
+  (use "git checkout -- <file>..." to di
+
+        modified:   major-milestones
+
+Untracked files:
+  (use "git add <file>..." to include in
+
+        administration-doc
+        advertising-doc
+        hr-doc
+        product-development-doc
+        product-release-doc
+        product-testing-doc
+        purchases-doc
+
+Hello! You are in:business-venture (mast
+$git commit -m "Added entries to Sales a
+[master b8d1a0d] Added entries to Sales
+ 2 files changed, 6 insertions(+)
+ create mode 100644 marketing-doc
+ create mode 100644 sales-doc
+Hello! You are in:business-venture (mast
+$subl major-milestones
+Hello! You are in:business-venture (mast
+$git add major-milestones
+Hello! You are in:business-venture (mast
+$git commit -m "Building an MVP"
+[master 21ad1a4] Building an MVP
+ 1 file changed, 3 insertions(+), 1 dele
+Hello! You are in:business-venture (mast
+$git log --oneline
+21ad1a4 (HEAD -> master) Building an MVP
+b8d1a0d Added entries to Sales and Marke
+2eef9cb Forming various departments -hr,
+ba56601 Formed development team
+0938214 Core team formed
+fcb2e80 Company formation done
+147d33d 1st commit - all starter docs
+Hello! You are in:business-venture (mast
+$ git diff fcb2e80 b8d1a0d
+diff --git a/major-milestones b/major-mi
+index c0f1546..b993554 100644
+--- a/major-milestones
++++ b/major-milestones
+@@ -1,3 +1,6 @@
+ MAJOR MILESTONES:
+
+ -- Formation of a public limited compan
++-- Core team formed including CEO, VPs,
++-- Hiring and forming the development t
++-- Hiring and forming the hr, administr
+\ No newline at end of file
+diff --git a/marketing-doc b/marketing-d
+new file mode 100644
+index 0000000..1b0135f
+--- /dev/null
++++ b/marketing-doc
+@@ -0,0 +1,3 @@
++This is the marketing doc
++
++-- We need to hire a campaign manager
+\ No newline at end of file
+diff --git a/sales-doc b/sales-doc
+new file mode 100644
+index 0000000..b49bcc1
+--- /dev/null
++++ b/sales-doc
+@@ -0,0 +1,3 @@
++This is the sales doc
++
++-- We will try to manage our sales forc
+\ No newline at end of file
+Hello! You are in:business-venture (mast
+$subl major-milestones
+Hello! You are in:business-venture (mast
+$subl sales doc
+Hello! You are in:business-venture (mast
+$subl sales-doc
+Hello! You are in:business-venture (mast
+$ git difftool fcb2e80 b8d1a0d

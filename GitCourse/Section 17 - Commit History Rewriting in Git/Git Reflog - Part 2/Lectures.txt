@@ -1,0 +1,319 @@
+Hello! You are in:git-fast:
+$cd demo-rebase
+Hello! You are in:demo-rebase (master):
+$git show master@{1.days.ago}
+commit ba879fc0c4f7b422eb26575a63e9bfed12406e95 (HEAD -> master)
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Thu Dec 14 15:26:48 2017 +0000
+
+    rebase-conflict - 3 changes - index.html
+
+diff --git a/index.html b/index.html
+index c4f1430..9545448 100644
+--- a/index.html
++++ b/index.html
+@@ -6,10 +6,10 @@
+     <head>
+         <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+-        <title>Demonstration of Rebase Demo</title>
++        <title>Rebase Demo</title>
+         <meta name="description" content="">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+-        <link rel="apple-touch-icon" href="apple-touch-icon5.png">
++        <link rel="apple-touch-icon" href="apple-touch-icon2.png">
+
+         <link rel="stylesheet" href="css/normalize.min.css">
+         <link rel="stylesheet" href="css/main.css">
+Hello! You are in:demo-rebase (master):
+$clear
+Hello! You are in:demo-rebase (master):
+$git log -g master
+commit ba879fc0c4f7b422eb26575a63e9bfed12406e95 (HEAD -> master)
+Reflog: master@{0} (Conor <conor.nugent9@gmail.com>)
+Reflog message: merge rebase-conflict: Fast-forward
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Thu Dec 14 15:26:48 2017 +0000
+
+    rebase-conflict - 3 changes - index.html
+
+commit 4a9bfc3b0acf07cd3ee1d83c1f32cc4a8a82776f
+Reflog: master@{1} (Conor <conor.nugent9@gmail.com>)
+Reflog message: commit: master - 3 conflicting changes - index.html
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Thu Dec 14 15:29:52 2017 +0000
+
+    master - 3 conflicting changes - index.html
+
+commit 411946e3501e79868283730a2174a50326e0cb4f
+Reflog: master@{2} (Conor <conor.nugent9@gmail.com>)
+Reflog message: commit: master: prior to rebase conflict
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Thu Dec 14 15:24:02 2017 +0000
+
+    master: prior to rebase conflict
+
+commit f5f66dd385a6a0fc7daa3d5111d1b5da92f9a3c3
+Reflog: master@{3} (Conor <conor.nugent9@gmail.com>)
+Reflog message: merge top-feature: Fast-forward
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Thu Dec 14 14:48:22 2017 +0000
+
+    top-feature: browser upgrade recommendation - index.html
+
+commit 6201485490f89c6aed021ad651a1b37257f922e4
+Reflog: master@{4} (Conor <conor.nugent9@gmail.com>)
+Reflog message: commit: master: modified font family - 404.html
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Thu Dec 14 14:52:35 2017 +0000
+
+    master: modified font family - 404.html
+
+commit 142ed63368dd3da343cc2f3e37c7ccc4b4ed340c
+Reflog: master@{5} (Conor <conor.nugent9@gmail.com>)
+Reflog message: commit: master: modified title - 404.html
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Thu Dec 14 14:51:06 2017 +0000
+
+    master: modified title - 404.html
+
+commit 8565ac6c93adb01b488b2778149f8e36f40e1447
+Reflog: master@{6} (Conor <conor.nugent9@gmail.com>)
+Reflog message: commit: master: added team information - humans.txt
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Thu Dec 14 14:43:52 2017 +0000
+
+    master: added team information - humans.txt
+
+commit 5b2be6e5209b50f5a2dbb90cb5a7825c3a82d7d5
+Reflog: master@{7} (Conor <conor.nugent9@gmail.com>)
+Reflog message: commit: master: added name - humans.txt
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Thu Dec 14 14:40:52 2017 +0000
+
+    master: added name - humans.txt
+
+commit 69f739b6ae45349569d075b302ac4fe56993bd74
+Reflog: master@{8} (Conor <conor.nugent9@gmail.com>)
+Reflog message: commit (initial): setting up repository
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Thu Dec 14 14:39:26 2017 +0000
+
+    setting up repository
+Hello! You are in:demo-rebase (master):
+$git log --oneline --decorate --graph --all
+* ba879fc (HEAD -> master) rebase-conflict - 3 changes - index.html
+* 4a9bfc3 master - 3 conflicting changes - index.html
+* 411946e master: prior to rebase conflict
+* f5f66dd top-feature: browser upgrade recommendation - index.html
+* c26f58c top-feature: modified title - index.html
+* 6201485 master: modified font family - 404.html
+* 142ed63 master: modified title - 404.html
+* 8565ac6 master: added team information - humans.txt
+* 5b2be6e master: added name - humans.txt
+* 69f739b setting up repository
+Hello! You are in:demo-rebase (master):
+$git reflog
+ba879fc (HEAD -> master) HEAD@{0}: merge rebase-conflict: Fast-forward
+4a9bfc3 HEAD@{1}: checkout: moving from rebase-conflict to master
+ba879fc (HEAD -> master) HEAD@{2}: rebase finished: returning to refs/heads/rebase-conflict
+ba879fc (HEAD -> master) HEAD@{3}: rebase: rebase-conflict - 3 changes - index.html
+4a9bfc3 HEAD@{4}: rebase: checkout master
+6630861 HEAD@{5}: rebase: updating HEAD
+6630861 HEAD@{6}: rebase: aborting
+4a9bfc3 HEAD@{7}: rebase: checkout master
+6630861 HEAD@{8}: checkout: moving from master to rebase-conflict
+4a9bfc3 HEAD@{9}: commit: master - 3 conflicting changes - index.html
+411946e HEAD@{10}: checkout: moving from rebase-conflict to master
+6630861 HEAD@{11}: commit: rebase-conflict - 3 changes - index.html
+411946e HEAD@{12}: checkout: moving from master to rebase-conflict
+411946e HEAD@{13}: commit: master: prior to rebase conflict
+f5f66dd HEAD@{14}: merge top-feature: Fast-forward
+6201485 HEAD@{15}: checkout: moving from top-feature to master
+f5f66dd HEAD@{16}: rebase finished: returning to refs/heads/top-feature
+f5f66dd HEAD@{17}: rebase: top-feature: browser upgrade recommendation - index.html
+c26f58c HEAD@{18}: rebase: top-feature: modified title - index.html
+6201485 HEAD@{19}: rebase: checkout master
+e69c898 HEAD@{20}: checkout: moving from master to top-feature
+6201485 HEAD@{21}: commit: master: modified font family - 404.html
+142ed63 HEAD@{22}: commit: master: modified title - 404.html
+8565ac6 HEAD@{23}: checkout: moving from top-feature to master
+e69c898 HEAD@{24}: commit: top-feature: browser upgrade recommendation - index.html
+0f8c699 HEAD@{25}: commit: top-feature: modified title - index.html
+8565ac6 HEAD@{26}: checkout: moving from master to top-feature
+8565ac6 HEAD@{27}: commit: master: added team information - humans.txt
+5b2be6e HEAD@{28}: commit: master: added name - humans.txt
+69f739b HEAD@{29}: commit (initial): setting up repository
+Hello! You are in:demo-rebase (master):
+$ cd ..
+Hello! You are in:git-fast:
+$cd demo-reflog
+Hello! You are in:demo-reflog:
+$git init
+Initialized empty Git repository in C:/Users/conor/git-fast/demo-reflog/.git/
+Hello! You are in:demo-reflog (master #):
+$git add .
+warning: LF will be replaced by CRLF in 404.html.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in browserconfig.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in css/main.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in css/normalize.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in humans.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in js/main.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in js/plugins.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in js/vendor/jquery-1.11.2.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in js/vendor/modernizr-2.8.3-respond-1.4.2.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-reflog (master +):
+$git commit -m "setup repository"
+[master (root-commit) d746e7c] setup repository
+ 16 files changed, 1022 insertions(+)
+ create mode 100644 404.html
+ create mode 100644 apple-touch-icon.png
+ create mode 100644 browserconfig.xml
+ create mode 100644 css/main.css
+ create mode 100644 css/normalize.css
+ create mode 100644 css/normalize.min.css
+ create mode 100644 favicon.ico
+ create mode 100644 humans.txt
+ create mode 100644 index.html
+ create mode 100644 js/main.js
+ create mode 100644 js/plugins.js
+ create mode 100644 js/vendor/jquery-1.11.2.min.js
+ create mode 100644 js/vendor/modernizr-2.8.3-respond-1.4.2.min.js
+ create mode 100644 robots.txt
+ create mode 100644 tile-wide.png
+ create mode 100644 tile.png
+Hello! You are in:demo-reflog (master):
+$git log --oneline
+d746e7c (HEAD -> master) setup repository
+Hello! You are in:demo-reflog (master):
+$subl 404.html
+Hello! You are in:demo-reflog (master):
+$git add 404.html
+warning: LF will be replaced by CRLF in 404.html.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-reflog (master +):
+$git commit -m "master: added title - 404.html"
+[master 835f31a] master: added title - 404.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hello! You are in:demo-reflog (master):
+$subl 404.html
+Hello! You are in:demo-reflog (master):
+$git add 404.html
+Hello! You are in:demo-reflog (master +):04.html.
+$git commit -m "master:modified line height - 404.html"
+[master a4d7f1f] master:modified line height - 404.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hello! You are in:demo-reflog (master):
+$git log --oneline --decorate --graph --all
+* a4d7f1f (HEAD -> master) master:modified line height - 404.html
+* 835f31a master: added title - 404.html
+* d746e7c setup repository
+Hello! You are in:demo-reflog (master):
+$git reset --hard d746e7c
+HEAD is now at d746e7c setup repository
+Hello! You are in:demo-reflog (master):
+$git log --oneline --decorate --graph --all
+* d746e7c (HEAD -> master) setup repository
+Hello! You are in:demo-reflog (master):
+$git reflog
+d746e7c (HEAD -> master) HEAD@{0}: reset: moving to d746e7c
+a4d7f1f HEAD@{1}: commit: master:modified line height - 404.html
+835f31a HEAD@{2}: commit: master: added title - 404.html
+d746e7c (HEAD -> master) HEAD@{3}: commit (initial): setup repository
+Hello! You are in:demo-reflog (master):
+$git checkout HEAD@{1}
+Note: checking out 'HEAD@{1}'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at a4d7f1f... master:modified line height - 404.html
+Hello! You are in:demo-reflog ((a4d7f1f...)):
+$git log --oneline --decorate --graph --all
+* a4d7f1f (HEAD) master:modified line height - 404.html
+* 835f31a master: added title - 404.html
+* d746e7c (master) setup repository
+Hello! You are in:demo-reflog ((a4d7f1f...)):
+$subl 404.html
+Hello! You are in:demo-reflog ((a4d7f1f...)):
+$git add 404.html
+Hello! You are in:demo-reflog ((a4d7f1f...) +):l.
+$git commit -m "detached head: modified text alignment - 404.html"
+[detached HEAD 65630c0] detached head: modified text alignment - 404.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hello! You are in:demo-reflog ((65630c0...)):
+$git checkout -b restore-branch
+Switched to a new branch 'restore-branch'
+Hello! You are in:demo-reflog (restore-branch):
+$git log --oneline --decorate --graph --all
+* 65630c0 (HEAD -> restore-branch) detached head: modified text alignment - 404.html
+* a4d7f1f master:modified line height - 404.html
+* 835f31a master: added title - 404.html
+* d746e7c (master) setup repository
+Hello! You are in:demo-reflog (restore-branch):
+$subl 404.html
+Hello! You are in:demo-reflog (restore-branch):
+$git add 404.html
+warning: LF will be replaced by CRLF in 404.html.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-reflog (restore-branch +):
+$git commit -m "detached head: modified font family - 404.html"
+[restore-branch 252a4df] detached head: modified font family - 404.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hello! You are in:demo-reflog (restore-branch):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-reflog (master):
+$git log --oneline --decorate --graph --all
+* 252a4df (restore-branch) detached head: modified font family - 404.html
+* 65630c0 detached head: modified text alignment - 404.html
+* a4d7f1f master:modified line height - 404.html
+* 835f31a master: added title - 404.html
+* d746e7c (HEAD -> master) setup repository
+Hello! You are in:demo-reflog (master):
+$git merge restore-branch
+Updating d746e7c..252a4df
+Fast-forward
+ 404.html | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Hello! You are in:demo-reflog (master):
+$git branch -d restore-branch
+Deleted branch restore-branch (was 252a4df).
+Hello! You are in:demo-reflog (master):
+$git log --oneline --decorate --graph --all
+* 252a4df (HEAD -> master) detached head: modified font family - 404.html
+* 65630c0 detached head: modified text alignment - 404.html
+* a4d7f1f master:modified line height - 404.html
+* 835f31a master: added title - 404.html
+* d746e7c setup repository
+Hello! You are in:demo-reflog (master):
+$git reflog
+252a4df (HEAD -> master) HEAD@{0}: merge restore-branch: Fast-forward
+d746e7c HEAD@{1}: checkout: moving from restore-branch to master
+252a4df (HEAD -> master) HEAD@{2}: commit: detached head: modified font family - 404.html
+65630c0 HEAD@{3}: checkout: moving from 65630c0bea4facc32e4e89da32d4bcc252b8afbe to restore-branch
+65630c0 HEAD@{4}: commit: detached head: modified text alignment - 404.html
+a4d7f1f HEAD@{5}: checkout: moving from master to HEAD@{1}
+d746e7c HEAD@{6}: reset: moving to d746e7c
+a4d7f1f HEAD@{7}: commit: master:modified line height - 404.html
+835f31a HEAD@{8}: commit: master: added title - 404.html
+d746e7c HEAD@{9}: commit (initial): setup repository

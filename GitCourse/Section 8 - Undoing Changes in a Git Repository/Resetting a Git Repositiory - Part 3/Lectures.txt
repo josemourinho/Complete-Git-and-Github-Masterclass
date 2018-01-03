@@ -1,0 +1,134 @@
+Hello! You are in:git-fast:
+$cd git-reset-demo-4
+warning: LF will be replaced by CRLF in goldies-timetable.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in jimmys-timetable.
+The file will have its original line endings in your working directory.
+Hello! You are in:git-reset-demo-4 (master):
+$clear
+gHello! You are in:git-reset-demo-4 (master):
+$git log  --oneline
+c442bdc (HEAD -> master) 5th commit - Jimmy and Goldies' timetables
+4699e03 4th commit - Jimmy and Goldies' timetables
+18df676 3rd commit - Jimmy and Goldies' timetables
+f3b89e0 2nd commit - Jimmy and Goldies' timetables
+d99990b 1st commit - Jimmy and Goldies' timetables
+Hello! You are in:git-reset-demo-4 (master):
+$git reset 4699e03
+Unstaged changes after reset:
+M       goldies-timetable
+M       jimmys-timetable
+warning: LF will be replaced by CRLF in goldies-timetable.
+The file will have its original line endings in your working directory.
+Hello! You are in:git-reset-demo-4 (master *):
+$git log --oneline
+4699e03 (HEAD -> master) 4th commit - Jimmy and Goldies' timetables
+18df676 3rd commit - Jimmy and Goldies' timetables
+f3b89e0 2nd commit - Jimmy and Goldies' timetables
+d99990b 1st commit - Jimmy and Goldies' timetables
+warning: LF will be replaced by CRLF in goldies-timetable.
+The file will have its original line endings in your working directory.
+Hello! You are in:git-reset-demo-4 (master *):
+$git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   goldies-timetable
+        modified:   jimmys-timetable
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in goldies-timetable.
+The file will have its original line endings in your working directory.
+Hello! You are in:git-reset-demo-4 (master *):
+$git add jimmys-timetable
+warning: LF will be replaced by CRLF in jimmys-timetable.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in goldies-timetable.
+The file will have its original line endings in your working directory.
+Hello! You are in:git-reset-demo-4 (master *+):
+$git commit -m "1st commit - post reset"
+[master a595a79] 1st commit - post reset
+ 1 file changed, 1 insertion(+)
+warning: LF will be replaced by CRLF in goldies-timetable.
+The file will have its original line endings in your working directory.
+Hello! You are in:git-reset-demo-4 (master *):
+$git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   goldies-timetable
+
+no changes added to commit (use "git add" and/or "git commit -a")
+warning: LF will be replaced by CRLF in goldies-timetable.
+The file will have its original line endings in your working directory.
+Hello! You are in:git-reset-demo-4 (master *):
+$git add goldies-timetable
+warning: LF will be replaced by CRLF in goldies-timetable.
+The file will have its original line endings in your working directory.
+Hello! You are in:git-reset-demo-4 (master +):
+$git commit -m "2nd commit - post reset"
+[master 6e492a1] 2nd commit - post reset
+ 1 file changed, 1 insertion(+)
+Hello! You are in:git-reset-demo-4 (master):
+$git status
+On branch master
+nothing to commit, working tree clean
+Hello! You are in:git-reset-demo-4 (master):
+$git log --oneline
+6e492a1 (HEAD -> master) 2nd commit - post reset
+a595a79 1st commit - post reset
+4699e03 4th commit - Jimmy and Goldies' timetables
+18df676 3rd commit - Jimmy and Goldies' timetables
+f3b89e0 2nd commit - Jimmy and Goldies' timetables
+d99990b 1st commit - Jimmy and Goldies' timetables
+Hello! You are in:git-reset-demo-4 (master):
+$cd ..
+Hello! You are in:git-fast:
+$cd git-reset-demo-5
+warning: LF will be replaced by CRLF in goldies-timetable.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in jimmys-timetable.
+The file will have its original line endings in your working directory.
+Hello! You are in:git-reset-demo-5 (master):
+$git log --oneline
+c442bdc (HEAD -> master) 5th commit - Jimmy and Goldies' timetables
+4699e03 4th commit - Jimmy and Goldies' timetables
+18df676 3rd commit - Jimmy and Goldies' timetables
+f3b89e0 2nd commit - Jimmy and Goldies' timetables
+d99990b 1st commit - Jimmy and Goldies' timetables
+Hello! You are in:git-reset-demo-5 (master):
+$cat jimmys-timetable
+Jimmy wakes up at 6am
+Jimmy brushes his teeth
+Jimmy takes bread and butter for his breakfast
+Jimmy puts on his shirt, trousers and shoes
+Jimmy leaves home to catch his school bus
+Hello! You are in:git-reset-demo-5 (master):
+$cat goldies-timetable
+Goldie wakes up at 5am
+Goldie brushes her teeth
+Goldie takes bread and butter for her breakfast
+Goldie puts on her skirt, top and heels
+Goldie rides in her Dad's car to go to school
+Hello! You are in:git-reset-demo-5 (master):
+$git reset --hard 18df676
+HEAD is now at 18df676 3rd commit - Jimmy and Goldies' timetables
+Hello! You are in:git-reset-demo-5 (master):
+$git log --oneline
+18df676 (HEAD -> master) 3rd commit - Jimmy and Goldies' timetables
+f3b89e0 2nd commit - Jimmy and Goldies' timetables
+d99990b 1st commit - Jimmy and Goldies' timetables
+Hello! You are in:git-reset-demo-5 (master):
+$cat jimmys-timetable
+Jimmy wakes up at 6am
+Jimmy brushes his teeth
+Jimmy takes bread and butter for his breakfast
+Hello! You are in:git-reset-demo-5 (master):
+$cat goldies-timetable
+Goldie wakes up at 5am
+Goldie brushes her teeth
+Goldie takes bread and butter for her breakfast

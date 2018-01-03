@@ -1,0 +1,28 @@
+$git branch
+  4master
+* master
+Hello! You are in:git-with-github-demo (master):
+$git branch testbranch
+Hello! You are in:git-with-github-demo (master):
+$git branch
+  4master
+* master
+  testbranch
+Hello! You are in:git-with-github-demo (master):
+$clear
+Hello! You are in:git-with-github-demo (master):
+$git log --oneline
+6e2642c (HEAD -> master, testbranch, 4master) Test commit
+Hello! You are in:git-with-github-demo (master):
+$git branch
+  4master
+* master
+  testbranch
+Hello! You are in:git-with-github-demo (master):
+$git branch demobranch
+Hello! You are in:git-with-github-demo (master):
+$git checkout demobranch
+Switched to branch 'demobranch'
+Hello! You are in:git-with-github-demo (demobranch):
+$git log --oneline
+6e2642c (HEAD -> demobranch, testbranch, master, 4master) Test commit

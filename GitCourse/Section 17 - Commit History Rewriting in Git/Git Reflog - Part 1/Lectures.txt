@@ -1,0 +1,59 @@
+Hello! You are in:git-with-github-demo (master                                                                  ):
+$git reflog
+6e2642c (HEAD -> master, testbranch, demobranc                                                                  h, 4master) HEAD@{0}: checkout: moving from de                                                                  mobranch to master
+6e2642c (HEAD -> master, testbranch, demobranc                                                                  h, 4master) HEAD@{1}: checkout: moving from ma                                                                  ster to demobranch
+6e2642c (HEAD -> master, testbranch, demobranc                                                                  h, 4master) HEAD@{2}: commit (initial): Test c                                                                  ommit
+Hello! You are in:git-with-github-demo (master                                                                  ):
+$clear
+Hello! You are in:git-with-github-demo (master):
+$git reflog
+6e2642c (HEAD -> master, testbranch, demobranch, 4master) HEAD@{0}: checkout: moving from demobranch to master
+6e2642c (HEAD -> master, testbranch, demobranch, 4master) HEAD@{1}: checkout: moving from master to demobranch
+6e2642c (HEAD -> master, testbranch, demobranch, 4master) HEAD@{2}: commit (initial): Test commit
+Hello! You are in:git-with-github-demo (master):
+$ git show HEAD@{1}
+commit 6e2642c6c405d7ab4e1c6848932883e20cb56bc1 (HEAD -> master, testbranch, demobranch, 4master)
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 6 17:14:23 2017 +0000
+
+    Test commit
+
+diff --git a/Test b/Test
+new file mode 100644
+index 0000000..50f1062
+--- /dev/null
++++ b/Test
+@@ -0,0 +1 @@
++I am a test
+Hello! You are in:git-with-github-demo (master):
+$cd demo-rebase
+bash: cd: demo-rebase: No such file or directory
+Hello! You are in:git-with-github-demo (master):
+$cd ..
+Hello! You are in:git-fast:
+$cd demo-rebase
+Hello! You are in:demo-rebase (master):
+$git show master@{1.days.ago}
+commit ba879fc0c4f7b422eb26575a63e9bfed12406e95 (HEAD -> master)
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Thu Dec 14 15:26:48 2017 +0000
+
+    rebase-conflict - 3 changes - index.html
+
+diff --git a/index.html b/index.html
+index c4f1430..9545448 100644
+--- a/index.html
++++ b/index.html
+@@ -6,10 +6,10 @@
+     <head>
+         <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+-        <title>Demonstration of Rebase Demo</title>
++        <title>Rebase Demo</title>
+         <meta name="description" content="">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+-        <link rel="apple-touch-icon" href="apple-touch-icon5.png">
++        <link rel="apple-touch-icon" href="apple-touch-icon2.png">
+
+         <link rel="stylesheet" href="css/normalize.min.css">
+         <link rel="stylesheet" href="css/main.css">

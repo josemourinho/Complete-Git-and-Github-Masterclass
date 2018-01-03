@@ -1,0 +1,348 @@
+Hello! You are in:~:
+$cd git-fast
+Hello! You are in:git-fast:
+$cd demo-commands
+Hello! You are in:demo-commands (master):
+$ls
+404.html            css-main.css  index.html
+browserconfig.html  humans.txt
+Hello! You are in:demo-commands (master):
+$git log --oneline --decorate --graph --all
+* a287ae2 (test-branch) test-branch: modified
+* 3fec915 (HEAD -> master) master: changed lin
+* 380d213 master: added role - humans.txt
+* 8fe68ce master: added email - humans.txt
+* a985413 (release-feature) release-feature: c
+* 15b2c74 master: added browser name -index.ht
+* 3f57de9 (quick-feature) quick-feature: chang
+* 1c57052 quick-feature: changed title of 404.
+* 034db33 master: changed image name - browser
+* 8e5f9a1 (hotfix) hotfix: added browser recom
+* 458cfd0 hotfix: changes title of index.html
+* 90f7e3d added team details to humans.txt
+* c436df3 added name to humans.txt
+* ebd84a7 commit all
+Hello! You are in:demo-commands (master):
+$git checkout hotfix
+Switched to branch 'hotfix'
+Hello! You are in:demo-commands (hotfix):
+$git log --oneline --decorate --graph --all
+* a287ae2 (test-branch) test-branch: modified
+* 3fec915 (master) master: changed line height
+* 380d213 master: added role - humans.txt
+* 8fe68ce master: added email - humans.txt
+* a985413 (release-feature) release-feature: c
+* 15b2c74 master: added browser name -index.ht
+* 3f57de9 (quick-feature) quick-feature: chang
+* 1c57052 quick-feature: changed title of 404.
+* 034db33 master: changed image name - browser
+* 8e5f9a1 (HEAD -> hotfix) hotfix: added brows
+* 458cfd0 hotfix: changes title of index.html
+* 90f7e3d added team details to humans.txt
+* c436df3 added name to humans.txt
+* ebd84a7 commit all
+Hello! You are in:demo-commands (hotfix):
+$git log --oneline --decorate --graph
+* 8e5f9a1 (HEAD -> hotfix) hotfix: added brows
+* 458cfd0 hotfix: changes title of index.html
+* 90f7e3d added team details to humans.txt
+* c436df3 added name to humans.txt
+* ebd84a7 commit all
+Hello! You are in:demo-commands (hotfix):
+$git log --stat
+commit 8e5f9a13e44006d671dd9292b2d075e595065a0
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 10:51:36 2017 +0000
+
+    hotfix: added browser recommendation of in
+
+ index.html | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-
+
+commit 458cfd00d02f7e299697a42e079bc68c95997a6
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 10:46:50 2017 +0000
+
+    hotfix: changes title of index.html
+
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 90f7e3d9fa2df705153191d259dc8f89f8abfac
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 10:45:21 2017 +0000
+
+    added team details to humans.txt
+
+ humans.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit c436df31c068fc5c43fc93db3f71b2645f5d1a5
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 10:44:16 2017 +0000
+
+    added name to humans.txt
+
+ humans.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit ebd84a7b43a50bac37df697bb7f6d48da150aa7
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 10:43:17 2017 +0000
+
+    commit all
+
+ 404.html     | 1 +
+ css-main.css | 0
+ humans.txt   | 2 ++
+ index.html   | 1 +
+ 4 files changed, 4 insertions(+)
+
+Hello! You are in:demo-commands (hotfix):
+$
+Hello! You are in:demo-commands (hotfix):
+$git log --stat --oneline -n 2
+8e5f9a1 (HEAD -> hotfix) hotfix: added browser
+ index.html | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-
+458cfd0 hotfix: changes title of index.html
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hello! You are in:demo-commands (hotfix):
+$git log -p
+commit 8e5f9a13e44006d671dd9292b2d075e595065a0
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 10:51:36 2017 +0000
+
+    hotfix: added browser recommendation of in
+
+diff --git a/index.html b/index.html
+index dcffe32..41f973c 100644
+--- a/index.html
++++ b/index.html
+@@ -1 +1,3 @@
+-Title has now been changed
+\ No newline at end of file
++Title has now been changed
++
++-- Here is a browser recomendation
+\ No newline at end of file
+
+commit 458cfd00d02f7e299697a42e079bc68c95997a6
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 10:46:50 2017 +0000
+
+    hotfix: changes title of index.html
+
+diff --git a/index.html b/index.html
+index 8b54f95..dcffe32 100644
+--- a/index.html
++++ b/index.html
+@@ -1 +1 @@
+-Title
+\ No newline at end of file
++Title has now been changed
+\ No newline at end of file
+
+commit 90f7e3d9fa2df705153191d259dc8f89f8abfac
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 10:45:21 2017 +0000
+
+    added team details to humans.txt
+
+diff --git a/humans.txt b/humans.txt
+index fc77b3a..ad19c2b 100644
+--- a/humans.txt
++++ b/humans.txt
+@@ -1,4 +1,5 @@
+ I am a human
+
+ -- My name is Conor
++-- My team is Chelsea
+
+
+commit c436df31c068fc5c43fc93db3f71b2645f5d1a5
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 10:44:16 2017 +0000
+
+    added name to humans.txt
+
+diff --git a/humans.txt b/humans.txt
+index 46fb1a1..fc77b3a 100644
+--- a/humans.txt
++++ b/humans.txt
+@@ -1,2 +1,4 @@
+ I am a human
+
++-- My name is Conor
++
+
+commit ebd84a7b43a50bac37df697bb7f6d48da150aa7
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 10:43:17 2017 +0000
+
+    commit all
+
+diff --git a/404.html b/404.html
+new file mode 100644
+index 0000000..ac43fd3
+--- /dev/null
++++ b/404.html
+@@ -0,0 +1 @@
++This is a dead end
+\ No newline at end of file
+diff --git a/css-main.css b/css-main.css
+new file mode 100644
+index 0000000..e69de29
+diff --git a/humans.txt b/humans.txt
+new file mode 100644
+index 0000000..46fb1a1
+--- /dev/null
++++ b/humans.txt
+@@ -0,0 +1,2 @@
++I am a human
++
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..8b54f95
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1 @@
++Title
+\ No newline at end of file
+Hello! You are in:demo-commands (hotfix):
+$git log -p --oneline -n -1
+8e5f9a1 (HEAD -> hotfix) hotfix: added browser recommendation of index.html
+diff --git a/index.html b/index.html
+index dcffe32..41f973c 100644
+--- a/index.html
++++ b/index.html
+@@ -1 +1,3 @@
+-Title has now been changed
+\ No newline at end of file
++Title has now been changed
++
++-- Here is a browser recomendation
+\ No newline at end of file
+458cfd0 hotfix: changes title of index.html
+diff --git a/index.html b/index.html
+index 8b54f95..dcffe32 100644
+--- a/index.html
++++ b/index.html
+@@ -1 +1 @@
+-Title
+\ No newline at end of file
++Title has now been changed
+\ No newline at end of file
+90f7e3d added team details to humans.txt
+diff --git a/humans.txt b/humans.txt
+index fc77b3a..ad19c2b 100644
+--- a/humans.txt
++++ b/humans.txt
+@@ -1,4 +1,5 @@
+ I am a human
+
+ -- My name is Conor
++-- My team is Chelsea
+
+c436df3 added name to humans.txt
+diff --git a/humans.txt b/humans.txt
+index 46fb1a1..fc77b3a 100644
+--- a/humans.txt
++++ b/humans.txt
+@@ -1,2 +1,4 @@
+ I am a human
+
++-- My name is Conor
++
+ebd84a7 commit all
+diff --git a/404.html b/404.html
+new file mode 100644
+index 0000000..ac43fd3
+--- /dev/null
++++ b/404.html
+@@ -0,0 +1 @@
++This is a dead end
+\ No newline at end of file
+diff --git a/css-main.css b/css-main.css
+new file mode 100644
+index 0000000..e69de29
+diff --git a/humans.txt b/humans.txt
+new file mode 100644
+index 0000000..46fb1a1
+--- /dev/null
++++ b/humans.txt
+@@ -0,0 +1,2 @@
++I am a human
++
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..8b54f95
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1 @@
++Title
+\ No newline at end of file
+Hello! You are in:demo-commands (hotfix):
+$git checkout master
+
+Switched to branch 'master'
+Hello! You are in:demo-commands (master):
+$
+Hello! You are in:demo-commands (master):
+$ls
+404.html            css-main.css  index.html
+browserconfig.html  humans.txt
+Hello! You are in:demo-commands (master):
+$git log 404.html
+commit a98541397e84646fb5d6f562a55c4fc33a0e6ede (release-feature)
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 11:08:08 2017 +0000
+
+    release-feature: change title - 404.html
+
+commit 15b2c74ecaa1ba5b8634658a6a01132bd7909658
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 11:07:13 2017 +0000
+
+    master: added browser name -index.html
+
+commit 3f57de9d5502e236c8757b066cbc45ca9caedb37 (quick-feature)
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 10:57:27 2017 +0000
+
+    quick-feature: change font familt - 404.html
+
+commit 1c570522dd0d37ad0bcee380052eb1b157efdd58
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 10:56:20 2017 +0000
+
+    quick-feature: changed title of 404.html
+
+commit ebd84a7b43a50bac37df697bb7f6d48da150aa71
+Author: Conor <conor.nugent9@gmail.com>
+Date:   Wed Dec 13 10:43:17 2017 +0000
+
+    commit all
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+ Hello! You are in:demo-commands (master):
+$ git log --oneline grep="quick-feature"
+fatal: ambiguous argument 'grep=quick-feature': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+Hello! You are in:demo-commands (master):
+$ git log --oneline --grep="quick-feature"
+3f57de9 (quick-feature) quick-feature: change font familt - 404.html
+1c57052 quick-

@@ -1,0 +1,84 @@
+Hello! You are in:git-fast:
+$cp /c/Users/conor/Downloads/initializr-vereki                                                                  a-4.0.zip .
+Hello! You are in:git-fast:
+$ls -l initializr-verekia-4.0.zip
+-rw-r--r-- 1 conor 197121 61126 Dec  6 11:44 i                                                                  nitializr-verekia-4.0.zip
+Hello! You are in:git-fast:
+$unzip initializr-verekia-4.0.zip
+Archive:  initializr-verekia-4.0.zip
+  inflating: initializr/index.html
+  inflating: initializr/css/main.css
+  inflating: initializr/js/main.js
+  inflating: initializr/js/plugins.js
+  inflating: initializr/404.html
+  inflating: initializr/js/vendor/jquery-1.11.                                                                  2.min.js
+  inflating: initializr/css/normalize.css
+  inflating: initializr/css/normalize.min.css                                                                   
+  inflating: initializr/robots.txt
+  inflating: initializr/apple-touch-icon.png
+  inflating: initializr/browserconfig.xml
+  inflating: initializr/tile-wide.png
+  inflating: initializr/tile.png
+  inflating: initializr/favicon.ico
+  inflating: initializr/humans.txt
+  inflating: initializr/js/vendor/modernizr-2.                                                                  8.3-respond-1.4.2.min.js
+   creating: initializr/img/
+Hello! You are in:git-fast:
+$rm initializr-verekia-4.0.zip
+Hello! You are in:git-fast:
+$mv initializr/ myRepoFromExisitingSource
+Hello! You are in:git-fast:
+$cd myRepoFromExisitingSource/
+Hello! You are in:myRepoFromExisitingSource:
+$ls -l
+total 31
+-rw-r--r-- 1 conor 197121 1272 Nov 24 15:58 40                                                                  4.html
+-rw-r--r-- 1 conor 197121 3959 Nov 24 15:58 ap                                                                  ple-touch-icon.png
+-rw-r--r-- 1 conor 197121  416 Nov 24 15:58 br                                                                  owserconfig.xml
+drwxr-xr-x 1 conor 197121    0 Dec  6 11:46 cs                                                                  s/
+-rw-r--r-- 1 conor 197121  766 Nov 24 15:58 fa                                                                  vicon.ico
+-rw-r--r-- 1 conor 197121  191 Nov 24 15:58 hu                                                                  mans.txt
+drwxr-xr-x 1 conor 197121    0 Nov 24 15:58 im                                                                  g/
+-rw-r--r-- 1 conor 197121 5115 Nov 24 15:58 in                                                                  dex.html
+drwxr-xr-x 1 conor 197121    0 Dec  6 11:46 js                                                                  /
+-rw-r--r-- 1 conor 197121   78 Nov 24 15:58 ro                                                                  bots.txt
+-rw-r--r-- 1 conor 197121 3482 Nov 24 15:58 ti                                                                  le.png
+-rw-r--r-- 1 conor 197121 1854 Nov 24 15:58 ti                                                                  le-wide.png
+Hello! You are in:myRepoFromExisitingSource:
+$ls -al
+total 39
+drwxr-xr-x 1 conor 197121    0 Dec  6 11:46 ./
+drwxr-xr-x 1 conor 197121    0 Dec  6 11:48 ..                                                                  /
+-rw-r--r-- 1 conor 197121 1272 Nov 24 15:58 40                                                                  4.html
+-rw-r--r-- 1 conor 197121 3959 Nov 24 15:58 ap                                                                  ple-touch-icon.png
+-rw-r--r-- 1 conor 197121  416 Nov 24 15:58 br                                                                  owserconfig.xml
+drwxr-xr-x 1 conor 197121    0 Dec  6 11:46 cs                                                                  s/
+-rw-r--r-- 1 conor 197121  766 Nov 24 15:58 fa                                                                  vicon.ico
+-rw-r--r-- 1 conor 197121  191 Nov 24 15:58 hu                                                                  mans.txt
+drwxr-xr-x 1 conor 197121    0 Nov 24 15:58 im                                                                  g/
+-rw-r--r-- 1 conor 197121 5115 Nov 24 15:58 in                                                                  dex.html
+drwxr-xr-x 1 conor 197121    0 Dec  6 11:46 js                                                                  /
+-rw-r--r-- 1 conor 197121   78 Nov 24 15:58 ro                                                                  bots.txt
+-rw-r--r-- 1 conor 197121 3482 Nov 24 15:58 ti                                                                  le.png
+-rw-r--r-- 1 conor 197121 1854 Nov 24 15:58 ti                                                                  le-wide.png
+Hello! You are in:myRepoFromExisitingSource:
+$git init
+Initialized empty Git repository in C:/Users/c                                                                  onor/git-fast/myRepoFromExisitingSource/.git/
+Hello! You are in:myRepoFromExisitingSource (m                                                                  aster #):
+$ls -al
+total 43
+drwxr-xr-x 1 conor 197121    0 Dec  6 11:48 ./
+drwxr-xr-x 1 conor 197121    0 Dec  6 11:48 ../
+drwxr-xr-x 1 conor 197121    0 Dec  6 11:48 .git/
+-rw-r--r-- 1 conor 197121 1272 Nov 24 15:58 404.html
+-rw-r--r-- 1 conor 197121 3959 Nov 24 15:58 apple-touch-icon.png
+-rw-r--r-- 1 conor 197121  416 Nov 24 15:58 browserconfig.xml
+drwxr-xr-x 1 conor 197121    0 Dec  6 11:46 css/
+-rw-r--r-- 1 conor 197121  766 Nov 24 15:58 favicon.ico
+-rw-r--r-- 1 conor 197121  191 Nov 24 15:58 humans.txt
+drwxr-xr-x 1 conor 197121    0 Nov 24 15:58 img/
+-rw-r--r-- 1 conor 197121 5115 Nov 24 15:58 index.html
+drwxr-xr-x 1 conor 197121    0 Dec  6 11:46 js/
+-rw-r--r-- 1 conor 197121   78 Nov 24 15:58 robots.txt
+-rw-r--r-- 1 conor 197121 3482 Nov 24 15:58 tile.png
+-rw-r--r-- 1 conor 197121 1854 Nov 24 15:58 tile-wide.png

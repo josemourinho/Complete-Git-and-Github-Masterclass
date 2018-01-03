@@ -1,0 +1,247 @@
+Hello! You are in:demo-rebase (master):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-rebase (master):
+$subl humans.txt
+Hello! You are in:demo-rebase (master):
+$git add humans.txt humans.txt
+warning: LF will be replaced by CRLF in humans.txt.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-rebase (master +):
+$git commit -am "master: prior to rebase conflict"
+[master 411946e] master: prior to rebase conflict
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hello! You are in:demo-rebase (master):
+$git checkout -b rebase-conflict
+Switched to a new branch 'rebase-conflict'
+Hello! You are in:demo-rebase (rebase-conflict):
+$subl index.html
+Hello! You are in:demo-rebase (rebase-conflict):
+$ git add index.html
+Hello! You are in:demo-rebase (rebase-conflict +):
+$git commit -m "rebase-conflict - 3 changes - index.html"
+[rebase-conflict 6630861] rebase-conflict - 3 changes - index.html
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Hello! You are in:demo-rebase (rebase-conflict):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-rebase (master):
+$subl index.html
+Hello! You are in:demo-rebase (master):
+$git commit -m "master - 3 conflicting changes - index.html"
+On branch master
+Changes not staged for commit:
+        modified:   index.html
+
+no changes added to commit
+Hello! You are in:demo-rebase (master *):
+$git add index.html
+Hello! You are in:demo-rebase (master +):
+$git commit -m "master - 3 conflicting changes - index.html"
+[master 4a9bfc3] master - 3 conflicting changes - index.html
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Hello! You are in:demo-rebase (master):
+$git log --oneline --decorate --graph --all
+* 4a9bfc3 (HEAD -> master) master - 3 conflicting changes - index.html
+| * 6630861 (rebase-conflict) rebase-conflict - 3 changes - index.html
+|/
+* 411946e master: prior to rebase conflict
+* f5f66dd top-feature: browser upgrade recommendation - index.html
+* c26f58c top-feature: modified title - index.html
+* 6201485 master: modified font family - 404.html
+* 142ed63 master: modified title - 404.html
+* 8565ac6 master: added team information - hum:...skipping...
+* 4a9bfc3 (HEAD -> master) master - 3 conflict
+| * 6630861 (rebase-conflict) rebase-conflict
+|/
+* 411946e master: prior to rebase conflict
+* f5f66dd top-feature: browser upgrade recomme
+* c26f58c top-feature: modified title - index.
+* 6201485 master: modified font family - 404.h
+* 142ed63 master: modified title - 404.html
+* 8565ac6 master: added team information - hum
+* 5b2be6e master: added name - humans.txt
+* 69f739b setting up repository
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+Hello! You are in:demo-rebase (master):
+$git checkout rebase-conflict
+Switched to branch 'rebase-conflict'
+Hello! You are in:demo-rebase (rebase-conflict):
+$git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: rebase-conflict - 3 changes - index.html
+error: Failed to merge in the changes.
+Using index info to reconstruct a base tree...
+M       index.html
+Falling back to patching base and 3-way merge...
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Patch failed at 0001 rebase-conflict - 3 changes - index.html
+The copy of the patch that failed is found in: .git/rebase-apply/patch
+
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+
+Hello! You are in:demo-rebase (rebase-conflict *+|REBASE 1/1):
+$git rebase --abort
+Hello! You are in:demo-rebase (rebase-conflict):
+$git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: rebase-conflict - 3 changes - index.html
+error: Failed to merge in the changes.
+Using index info to reconstruct a base tree...
+M       index.html
+Falling back to patching base and 3-way merge...
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Patch failed at 0001 rebase-conflict - 3 changes - index.html
+The copy of the patch that failed is found in: .git/rebase-apply/patch
+
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+
+Hello! You are in:demo-rebase (rebase-conflict *+|REBASE 1/1):
+$git mergetool
+Merging:
+index.html
+
+Normal merge conflict for 'index.html':
+  {local}: modified file
+  {remote}: modified file
+Hello! You are in:demo-rebase (rebase-conflict +|REBASE 1/1):
+$git status
+rebase in progress; onto 4a9bfc3
+You are currently rebasing branch 'rebase-conflict' on '4a9bfc3'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   index.html
+
+Hello! You are in:demo-rebase (rebase-conflict +|REBASE 1/1):
+$git rebase --continue
+Applying: rebase-conflict - 3 changes - index.html
+Hello! You are in:demo-rebase (rebase-conflict):
+$subl index.html
+Hello! You are in:demo-rebase (rebase-conflict):
+$git log --oneline --decorate --graph --all   * ba879fc (HEAD -> rebase-conflict) rebase-conflict - 3 changes - index.html
+* 4a9bfc3 (master) master - 3 conflicting changes - index.html
+* 411946e master: prior to rebase conflict
+* f5f66dd top-feature: browser upgrade recommendation - index.html
+* c26f58c top-feature: modified title - index.html
+* 6201485 master: modified font family - 404.html
+* 142ed63 master: modified title - 404.html
+* 8565ac6 master: added team information - humans.txt
+:...skipping...
+* ba879fc (HEAD -> rebase-conflict) rebase-con
+* 4a9bfc3 (master) master - 3 conflicting chan
+* 411946e master: prior to rebase conflict
+* f5f66dd top-feature: browser upgrade recomme
+* c26f58c top-feature: modified title - index.
+* 6201485 master: modified font family - 404.h
+* 142ed63 master: modified title - 404.html
+* 8565ac6 master: added team information - hum
+* 5b2be6e master: added name - humans.txt
+* 69f739b setting up repository
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+Hello! You are in:demo-rebase (rebase-conflict
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-rebase (master):
+$git merge rebase-conflict
+Updating 4a9bfc3..ba879fc
+Fast-forward
+ index.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Hello! You are in:demo-rebase (master):
+$git log --oneline --decorate --graph --all
+* ba879fc (HEAD -> master, rebase-conflict) rebase-conflict - 3 changes - index.html
+* 4a9bfc3 master - 3 conflicting changes - index.html
+* 411946e master: prior to rebase conflict
+* f5f66dd top-feature: browser upgrade recommendation - index.html
+* c26f58c top-feature: modified title - index.html
+* 6201485 master: modified font family - 404.html
+* 142ed63 master: modified title - 404.html
+* 8565ac6 master: added team information - humans.txt
+:...skipping...
+* ba879fc (HEAD -> master, rebase-conflict) re
+* 4a9bfc3 master - 3 conflicting changes - ind
+* 411946e master: prior to rebase conflict
+* f5f66dd top-feature: browser upgrade recomme
+* c26f58c top-feature: modified title - index.
+* 6201485 master: modified font family - 404.h
+* 142ed63 master: modified title - 404.html
+* 8565ac6 master: added team information - hum
+* 5b2be6e master: added name - humans.txt
+* 69f739b setting up repository
+Hello! You are in:demo-rebase (master):
+$git branch -d rebase-conflict
+Deleted branch rebase-conflict (was ba879fc).
+Hello! You are in:demo-rebase (master):
+$git log --oneline --decorate --graph --all
+* ba879fc (HEAD -> master) rebase-conflict - 3 changes - index.html
+* 4a9bfc3 master - 3 conflicting changes - index.html
+* 411946e master: prior to rebase conflict
+* f5f66dd top-feature: browser upgrade recommendation - index.html
+* c26f58c top-feature: modified title - index.html
+* 6201485 master: modified font family - 404.html
+* 142ed63 master: modified title - 404.html
+* 8565ac6 master: added team information - humans.txt
+:...skipping...
+* ba879fc (HEAD -> master) rebase-conflict - 3
+* 4a9bfc3 master - 3 conflicting changes - ind
+* 411946e master: prior to rebase conflict
+* f5f66dd top-feature: browser upgrade recomme
+* c26f58c top-feature: modified title - index.
+* 6201485 master: modified font family - 404.h
+* 142ed63 master: modified title - 404.html
+* 8565ac6 master: added team information - hum
+* 5b2be6e master: added name - humans.txt
+* 69f739b setting up repository

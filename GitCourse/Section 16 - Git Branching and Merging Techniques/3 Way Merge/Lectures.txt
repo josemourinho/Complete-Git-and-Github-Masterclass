@@ -1,0 +1,110 @@
+Switched to a new branch 'no-ff-branch'
+Hello! You are in:demo-merge (no-ff-branch):
+$git branch -d no-ff-branch
+error: Cannot delete branch 'no-ff-branch' checked out at 'C:/Users/conor/git-fast/demo-merge'
+Hello! You are in:demo-merge (no-ff-branch):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-merge (master):
+$git branch -d no-ff-branch
+Deleted branch no-ff-branch (was 32338f1).
+Hello! You are in:demo-merge (master):
+$clear
+Hello! You are in:demo-merge (master):
+$git status
+On branch master
+nothing to commit, working tree clean
+Hello! You are in:demo-merge (master):
+$git checkout -b 3wm-branch
+Switched to a new branch '3wm-branch'
+Hello! You are in:demo-merge (3wm-branch):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-merge (3wm-branch):
+$subl index.html
+Hello! You are in:demo-merge (3wm-branch):
+$git add .
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-merge (3wm-branch +):
+$git commit -m "modified index.html"
+g[3wm-branch 7b19ae0] modified index.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hello! You are in:demo-merge (3wm-branch):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-merge (master):
+$^Cubl sfdsdf#
+
+bash: bl: command not found
+Hello! You are in:demo-merge (master):
+$
+Hello! You are in:demo-merge (master):
+$
+Hello! You are in:demo-merge (master):
+$subl robots.txt
+Hello! You are in:demo-merge (master):
+$git add robots.txt
+warning: LF will be replaced by CRLF in robots.txt.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-merge (master +):
+$git commit -m "versatile robots"
+[master 6b925e6] versatile robots
+ 1 file changed, 1 insertion(+)
+Hello! You are in:demo-merge (master):
+$git log --oneline --decorate --graph
+* 6b925e6 (HEAD -> master) versatile robots
+*   32338f1 Merge branch 'no-ff-branch'
+|\
+| * 8ded021 social being
+| * 34888e1 robots serve humans
+|/
+* bd27d13 human responsibility
+* 592d205 name added
+* 5ada406 robotic intelligence
+* 227a295 all artifacts commited
+Hello! You are in:demo-merge (master):
+$git log --oneline --decorate --graph --all
+* 6b925e6 (HEAD -> master) versatile robots
+| * 7b19ae0 (3wm-branch) modified index.html
+|/
+*   32338f1 Merge branch 'no-ff-branch'
+|\
+| * 8ded021 social being
+| * 34888e1 robots serve humans
+|/
+* bd27d13 human responsibility
+* 592d205 name added
+* 5ada406 robotic intelligence
+* 227a295 all artifacts commited
+Hello! You are in:demo-merge (master):
+$ git merge 3wm-branch -m "our first 3 way merge"
+Merge made by the 'recursive' strategy.
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hello! You are in:demo-merge (master):
+$git branch -D 3wm-branch
+Deleted branch 3wm-branch (was 7b19ae0).
+Hello! You are in:demo-merge (master):
+$git log --oneline --decorate --graph
+*   6069a23 (HEAD -> master) our first 3 way merge
+|\
+| * 7b19ae0 modified index.html
+* | 6b925e6 versatile robots
+|/
+*   32338f1 Merge branch 'no-ff-branch'
+|\
+| * 8ded021 social being
+| * 34888e1 robots serve humans
+|/
+* bd27d13 human responsibility
+* 592d205 name added
+* 5ada406 robotic intelligence
+* 227a295 all artifacts commited
+Hello! You are in:demo-merge (master):
+$subl index.html

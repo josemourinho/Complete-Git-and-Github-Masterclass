@@ -1,0 +1,73 @@
+Hello! You are in:demo-custom-bash-promp               t:
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-custom-bash-promp               t:
+$git init
+Initialized empty Git repository in C:/U               sers/conor/git-fast/demo-custom-bash-pro               mpt/.git/
+Hello! You are in:demo-custom-bash-promp               t (master #):
+$git add .
+warning: LF will be replaced by CRLF in                404.html.
+The file will have its original line end               ings in your working directory.
+warning: LF will be replaced by CRLF in                browserconfig.xml.
+The file will have its original line end               ings in your working directory.
+warning: LF will be replaced by CRLF in                css/main.css.
+The file will have its original line end               ings in your working directory.
+warning: LF will be replaced by CRLF in                css/normalize.css.
+The file will have its original line end               ings in your working directory.
+warning: LF will be replaced by CRLF in                humans.txt.
+The file will have its original line end               ings in your working directory.
+warning: LF will be replaced by CRLF in                index.html.
+The file will have its original line end               ings in your working directory.
+warning: LF will be replaced by CRLF in                js/main.js.
+The file will have its original line end               ings in your working directory.
+warning: LF will be replaced by CRLF in                js/plugins.js.
+The file will have its original line end               ings in your working directory.
+warning: LF will be replaced by CRLF in                js/vendor/jquery-1.11.2.min.js.
+The file will have its original line end               ings in your working directory.
+warning: LF will be replaced by CRLF in                js/vendor/modernizr-2.8.3-respond-1.4.2.               min.js.
+The file will have its original line end               ings in your working directory.
+warning: LF will be replaced by CRLF in                robots.txt.
+The file will have its original line end               ings in your working directory.
+Hello! You are in:demo-custom-bash-promp               t (master +):
+$git commit -m "setup repo"
+[master (root-commit) c1c23a6] setup rep               o
+ 16 files changed, 1022 insertions(+)
+ create mode 100644 404.html
+ create mode 100644 apple-touch-icon.png
+ create mode 100644 browserconfig.xml
+ create mode 100644 css/main.css
+ create mode 100644 css/normalize.css
+ create mode 100644 css/normalize.min.cs               s
+ create mode 100644 favicon.ico
+ create mode 100644 humans.txt
+ create mode 100644 index.html
+ create mode 100644 js/main.js
+ create mode 100644 js/plugins.js
+ create mode 100644 js/vendor/jquery-1.1               1.2.min.js
+ create mode 100644 js/vendor/modernizr-               2.8.3-respond-1.4.2.min.js
+ create mode 100644 robots.txt
+ create mode 100644 tile-wide.png
+ create mode 100644 tile.png
+Hello! You are in:demo-custom-bash-promp               t (master):
+$git status
+On branch master
+nothing to commit, working tree clean
+Hello! You are in:demo-custom-bash-promp               t (master):
+$vi index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-custom-bash-prompt (master *):
+$git commit -am "added title"
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory.
+[master 1998f2e] added title
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hello! You are in:demo-custom-bash-prompt (master):
+$git log --oneline
+1998f2e (HEAD -> master) added title
+c1c23a6 setup repo

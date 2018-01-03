@@ -1,0 +1,101 @@
+Hello! You are in:demo-merge (master):
+$git checkout -b long-feature
+Switched to a new branch 'long-feature'
+Hello! You are in:demo-merge (long-feature):
+$ls
+404.html              img/
+apple-touch-icon.png  index.html
+browserconfig.xml     js/
+css/                  robots.txt
+favicon.ico           tile.png
+humans.txt            tile-wide.png
+Hello! You are in:demo-merge (long-feature):
+$subl 404.html
+Hello! You are in:demo-merge (long-feature):
+$git add 404.html
+warning: LF will be replaced by CRLF in 404.html.
+The file will have its original line endings in your working directory.
+Hello! You are in:demo-merge (long-feature +):
+$git commit -m "Modified 404 in 3 lines"
+[long-feature 344ba4f] Modified 404 in 3 lines
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Hello! You are in:demo-merge (long-feature):
+$git checkout master
+Switched to branch 'master'
+Hello! You are in:demo-merge (master):
+$subl 404.html
+Hello! You are in:demo-merge (master):
+$git add 404.html
+Hello! You are in:demo-merge (master +):
+$git commit -m "Error response for 404.html"
+[master 5db694f] Error response for 404.html
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Hello! You are in:demo-merge (master):
+$git log --oneline --decorate --graph --all   * 5db694f (HEAD -> master) Error response for 404.html
+| * 344ba4f (long-feature) Modified 404 in 3 lines
+|/
+*   6069a23 our first 3 way merge
+|\
+| * 7b19ae0 modified index.html
+* | 6b925e6 versatile robots
+|/
+*   32338f1 Merge branch 'no-ff-branch'
+|\
+| * 8ded021 social being
+| * 34888e1 robots serve humans
+|/
+* bd27d13 human responsibility
+* 592d205 name added
+* 5ada406 robotic intelligence
+* 227a295 all artifacts commited
+Hello! You are in:demo-merge (master):
+$git difftool master long-feature
+Hello! You are in:demo-merge (master):
+$git merge long-feature
+Auto-merging 404.html
+CONFLICT (content): Merge conflict in 404.html
+Automatic merge failed; fix conflicts and then commit the result.
+Hello! You are in:demo-merge (master *+|MERGING):
+$subl 404.html
+Hello! You are in:demo-merge (master *+|MERGING):
+$git mergetool
+Merging:
+404.html
+
+Normal merge conflict for '404.html':
+  {local}: modified file
+  {remote}: modified file
+Hello! You are in:demo-merge (master +|MERGING):
+$git add 404.html
+Hello! You are in:demo-merge (master +|MERGING):
+$git commit -m "resloved 3-way merge conflicts"
+[master bec4032] resloved 3-way merge conflicts
+Hello! You are in:demo-merge (master):
+$git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        404.html.orig
+
+nothing added to commit but untracked files present (use "git add" to track)
+Hello! You are in:demo-merge (master):
+$git log --oneline --decorate --graph         *   bec4032 (HEAD -> master) resloved 3-way merge conflicts
+|\
+| * 344ba4f (long-feature) Modified 404 in 3 lines
+* | 5db694f Error response for 404.html
+|/
+*   6069a23 our first 3 way merge
+|\
+| * 7b19ae0 modified index.html
+* | 6b925e6 versatile robots
+|/
+*   32338f1 Merge branch 'no-ff-branch'
+|\
+| * 8ded021 social being
+| * 34888e1 robots serve humans
+|/
+* bd27d13 human responsibility
+* 592d205 name added
+* 5ada406 robotic intelligence
+* 227a295 all artifacts commited

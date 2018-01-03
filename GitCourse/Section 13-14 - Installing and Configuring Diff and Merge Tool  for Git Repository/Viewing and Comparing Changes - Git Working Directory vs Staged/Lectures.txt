@@ -1,0 +1,70 @@
+Hello! You are in:business-venture (master):
+$ls
+administration-doc
+advertising-doc
+hr-doc
+major-milestones
+marketing-doc
+product-development-doc
+product-release-doc
+product-testing-doc
+purchases-doc
+sales-doc
+Hello! You are in:business-venture (master):
+$git log --oneline
+0af4d65 (HEAD -> master) 1st commit - all starter docs
+Hello! You are in:business-venture (master):
+$subl major-milestones
+Hello! You are in:business-venture (master):
+$git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   major-milestones
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Hello! You are in:business-venture (master *):
+$git commit -am "Company formation"
+[master d7dfb26] Company formation
+ 1 file changed, 3 insertions(+)
+Hello! You are in:business-venture (master):
+$subl major-milestones
+Hello! You are in:business-venture (master):
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   major-milestones
+
+no changes added to commit (use "git add " and/or "git commit -a")
+Hello! You are in:business-venture (mast                                                        er *):
+$git diff
+diff --git a/major-milestones b/major-mi                                                        lestones
+index 3a78794..06b8bb9 100644
+--- a/major-milestones
++++ b/major-milestones
+@@ -1,3 +1,4 @@
+ MAJOR MILESTONES:
+
+--- Formation of a public limited company (1 June)
+\ No newline at end of file
++-- Formation of a public limited company (1 June)
++-- Core team formed including CEO, VPs, CTO (16 July)
+\ No newline at end of file
+
+Hello! You are in:business-venture (master *):
+$
+Hello! You are in:business-venture (master *):
+$git difftool
+The diff tool p4merge is not available as 'C:/ProgramData/Program Files/Perforce                                                        /p4merge.exe'
+fatal: external diff died, stopping at major-milestones
+Hello! You are in:business-venture (master *):
+$git difftool
+Hello! You are in:business-venture (master *):
+$git commit -am "core team formed"
+[master 4f6a54a] core team formed
+ 1 file changed, 2 insertions(+), 1 deletion(-)

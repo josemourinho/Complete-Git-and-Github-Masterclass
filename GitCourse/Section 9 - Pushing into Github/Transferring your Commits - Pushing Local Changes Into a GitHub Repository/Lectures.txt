@@ -1,0 +1,30 @@
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$vi ex1.py
+Hello! You are in:Learn-Python-The-Hard-Way (master *):
+$git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ex1.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Hello! You are in:Learn-Python-The-Hard-Way (master *):
+$git add ex1.py
+Hello! You are in:Learn-Python-The-Hard-Way (master +):
+$git commit -m "simple message to demostrate the git push command"
+[master 4c17900] simple message to demostrate the git push command
+ 1 file changed, 1 insertion(+)
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 325 bytes | 23.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/josemourinho/Learn-Python-The-Hard-Way.git
+   fa3e119..4c17900  master -> master

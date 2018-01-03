@@ -1,0 +1,33 @@
+Hello! You are in:test (master +):
+$ls
+README.md   testfile-2  testfile-4
+testfile-1  testfile-3
+Hello! You are in:test (master +):
+$git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   testfile-1
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        README.md
+        testfile-2
+        testfile-3
+        testfile-4
+
+Hello! You are in:test (master +):
+$git add .
+Hello! You are in:test (master +):
+$git commit
+Aborting commit due to empty commit message.
+Hello! You are in:test (master +):
+$git config --global -- edit
+error: key does not contain a section: edit
+Hello! You are in:test (master +):
+$git config --global --edit

@@ -1,0 +1,56 @@
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git remote -v
+origin  https://github.com/josemourinho/Learn-Python-The-Hard-Way.git (fetch)
+origin  https://github.com/josemourinho/Learn-Python-The-Hard-Way.git (push)
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git remote set-url origin git@github.com:josemourinho/Learn-Python-the-Hard-Way
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git remote -v
+origin  git@github.com:josemourinho/Learn-Python-the-Hard-Way (fetch)
+origin  git@github.com:josemourinho/Learn-Python-the-Hard-Way (push)
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git pull origin master
+Enter passphrase for key '/c/Users/conor/.ssh/id_rsa':
+Enter passphrase for key '/c/Users/conor/.ssh/id_rsa':
+Enter passphrase for key '/c/Users/conor/.ssh/id_rsa':
+From github.com:josemourinho/Learn-Python-the-Hard-Way
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$vi ex1.py
+Hello! You are in:Learn-Python-The-Hard-Way (master *):
+$git add .
+Hello! You are in:Learn-Python-The-Hard-Way (master +):
+$git commit -m "New Change"
+[master 6bd9c09] New Change
+ 1 file changed, 1 insertion(+)
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git push master origin
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git push origin master
+Enter passphrase for key '/c/Users/conor/.ssh/id_rsa':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 298 bytes | 298.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:josemourinho/Learn-Python-the-Hard-Way
+   6be4547..6bd9c09  master -> master
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git remote -v
+origin  git@github.com:josemourinho/Learn-Python-the-Hard-Way (fetch)
+origin  git@github.com:josemourinho/Learn-Python-the-Hard-Way (push)
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git remote set-url origin https://github.com/josemourinho/Learn-Python-The-Hard-Way.git
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git remote -v
+origin  https://github.com/josemourinho/Learn-Python-The-Hard-Way.git (fetch)
+origin  https://github.com/josemourinho/Learn-Python-The-Hard-Way.git (push)
+
+Note: The password for access here is just "password"

@@ -1,0 +1,6 @@
+Hello! You are in:~:
+$ls -l ~/.ssh
+total 12
+-rw-r--r-- 1 conor 197121 3326 Nov 29 09:33 id_rsa
+-rw-r--r-- 1 conor 197121  750 Nov 28 17:08 id_rsa.pub
+-rw-r--r-- 1 conor 197121 1226 Nov 28 18:26 known_hosts

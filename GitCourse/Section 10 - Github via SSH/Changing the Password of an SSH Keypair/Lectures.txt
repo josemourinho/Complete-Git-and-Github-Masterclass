@@ -1,0 +1,79 @@
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$ssh-keygen -p
+Enter file in which the key is (/c/Users/conor/.ssh/id_rsa): password
+password: No such file or directory
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git remote -v
+origin  https://github.com/josemourinho/Learn-Python-The-Hard-Way.git (fetch)
+origin  https://github.com/josemourinho/Learn-Python-The-Hard-Way.git (push)
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git remote set-url origin git@github.com:josemourinho/Learn-Python-The-Hard-Way
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git remote -v
+origin  git@github.com:josemourinho/Learn-Python-The-Hard-Way (fetch)
+origin  git@github.com:josemourinho/Learn-Python-The-Hard-Way (push)
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$ls
+ex1.py           ex37except.py
+ex10.py          ex37exec.py
+ex11.py          ex37finally.py
+ex12.py          ex37for.py
+ex13.py          ex37from.py
+ex14.py          ex37global.py
+ex15.py          ex37if.py
+ex15_sample.txt  ex37import.py
+ex16.py          ex37in.py
+ex16drill.py     ex37is.py
+ex17.py          ex37lambda.py
+ex18.py          ex37not.py
+ex19.py          ex37or.py
+ex19SD.py        ex37pass.py
+ex1Notes.py      ex37raise.py
+ex2.py           ex37return.py
+ex20.py          ex37try.py
+ex21.py          ex37while.py
+ex21drill.py     ex37withas.py
+ex23.py          ex37yield.py
+ex24.py          ex38.py
+ex25.py          ex39.py
+ex251.py         ex3test.py
+ex26.py          ex4.py
+ex29.py          ex40.py
+ex3.py           ex402.py
+ex30.py          ex41.py
+ex31.py          ex42.py
+ex31test.py      ex43.py
+ex32.py          ex5.py
+ex32test.py      ex6.py
+ex33.py          ex7.py
+ex34.py          ex8.py
+ex35.py          ex9.py
+ex35P.py         exfunction.py
+ex36.py          Fizzbuzz.py
+ex37and.py       lab.py
+ex37assert.py    languages.txt
+ex37break.py     new_file.txt
+ex37class.py     README.md
+ex37continue.py  ted.txt
+ex37del.py       test.py
+ex37elif.py      test.txt
+ex37else.py
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$vi ex36.py
+Hello! You are in:Learn-Python-The-Hard-Way (master *):
+$git add .
+Hello! You are in:Learn-Python-The-Hard-Way (master +):
+$git commit -m "Update"
+[master 87efd44] Update
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hello! You are in:Learn-Python-The-Hard-Way (master):
+$git push origin master
+Enter passphrase for key '/c/Users/conor/.ssh/id_rsa':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 287 bytes | 287.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:josemourinho/Learn-Python-The-Hard-Way
+   6bd9c09..87efd44  master -> master

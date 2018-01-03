@@ -1,0 +1,70 @@
+Hello! You are in:demo-tag-2 (master):
+$git log --oneline --decorate --graph --all* 967db9f (HEAD -> master, tag: v-2.0-LW, origin/master) committed humans.txt
+* 3ab2de1 (tag: v1.2-AN) committed browserconfig.xml
+* 7872208 (tag: v1.1-AN) committed 404.html
+* d5866c9 (tag: v1.0-AN) committed index.html
+* 251e76c setup repository
+Hello! You are in:demo-tag-2 (master):
+$git config --global push.followTags true  Hello! You are in:demo-tag-2 (master):
+Hello! You are in:demo-tag-2 (master):
+$git config --global --list                user.name=Conor
+user.email=conor.nugent9@gmail.com
+core.editor='c:/program files/sublime text 3/subl.exe' -w
+diff.tool=p4merge
+difftool.p4merge.path=C:/Program Files/Perforce/p4merge.exe
+difftool.prompt=false
+merge.tool=p4merge
+mergetool.p4merge.path=C:/Program Files/Perforce/p4merge.exe
+mergetool.prompt=false
+mergetool.keepbackup=false
+push.followtags=true
+Hello! You are in:demo-tag-2 (master):
+$git tag -a -f v1.0-AN v1.0-AN
+Updated tag 'v1.0-AN' (was d5866c9)
+Hello! You are in:demo-tag-2 (master):
+$git tag -a -f v1.1-AN v1.1-AN
+Updated tag 'v1.1-AN' (was 7872208)
+Hello! You are in:demo-tag-2 (master):
+$git tag -a -f v1.2-AN v1.2-AN
+Updated tag 'v1.2-AN' (was 3ab2de1)
+Hello! You are in:demo-tag-2 (master):
+$git push -u origin master                 Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 410 bytes | 410.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/josemourinho/demo-tag-2.git
+ * [new tag]         v1.0-AN -> v1.0-AN
+ * [new tag]         v1.1-AN -> v1.1-AN
+ * [new tag]         v1.2-AN -> v1.2-AN
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Hello! You are in:demo-tag-2 (master):
+$git push origin :v1.0-AN
+To https://github.com/josemourinho/demo-tag-2.git
+ - [deleted]         v1.0-AN
+Hello! You are in:demo-tag-2 (master):
+$git push origin :v1.1-AN :v1.2-AN
+Counting objects: 1, done.
+Writing objects: 100% (1/1), 158 bytes | 158.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/josemourinho/demo-tag-2.git
+ - [deleted]         v1.1-AN
+ - [deleted]         v1.2-AN
+ * [new tag]         v1.0-AN -> v1.0-AN
+Hello! You are in:demo-tag-2 (master):
+$git tag --list
+v-2.0-LW
+v1.0-AN
+v1.1-AN
+v1.2-AN
+Hello! You are in:demo-tag-2 (master):
+$git push origin v-2.0-LW
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 284 bytes | 284.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/josemourinho/demo-tag-2.git
+ * [new tag]         v-2.0-LW -> v-2.0-LW
+ * [new tag]         v1.1-AN -> v1.1-AN
+ * [new tag]         v1.2-AN -> v1.2-AN
